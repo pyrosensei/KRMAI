@@ -1,0 +1,17 @@
+langchain
+langchain_community
+langchain_huggingface
+langchain_chroma
+langchain_ollama
+langchain_text_splitters
+langchain_core
+chromadb
+sentence-transformers
+streamlit
+pypdf
+docx2txt
+requests
+fastapi
+uvicorn
+pydantic
+pydantic-settings
