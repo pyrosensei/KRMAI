@@ -1,16 +1,3 @@
-#!/usr/bin/env python3
-"""KRMAI Project Audit Agent.
-
-Runs a full project-level audit in one command:
-- Directory intelligence scan (project shape + entrypoints)
-- Backend model/system test suite (test_system.py)
-- API latency benchmark (/chat)
-- Frontend build performance snapshot (web-app build artifacts)
-
-Outputs:
-- evaluation/agent_audit_report.json
-- evaluation/agent_audit_report.md
-"""
 
 from __future__ import annotations
 
