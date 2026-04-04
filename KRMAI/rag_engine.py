@@ -1,18 +1,40 @@
 import os
 import requests
+import warnings
+import re
+from typing import List, Tuple
+
+# Suppress known non-fatal warning emitted by chromadb telemetry internals on Python 3.14+.
+warnings.filterwarnings(
+    "ignore",
+    message=r"'asyncio\.iscoroutinefunction' is deprecated and slated for removal in Python 3\.16; use inspect\.iscoroutinefunction\(\) instead",
+    category=DeprecationWarning,
+    module=r"chromadb\.telemetry\.opentelemetry",
+)
+warnings.filterwarnings(
+    "ignore",
+    message=r"Core Pydantic V1 functionality isn't compatible with Python 3\.14 or greater\.",
+    category=UserWarning,
+    module=r"langchain_core\._api\.deprecation",
+)
+
 from langchain_chroma import Chroma
+from langchain_core.documents import Document
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import PromptTemplate
-from langchain_core.runnables import RunnablePassthrough
-from langchain_core.output_parsers import StrOutputParser
 
 # ── Configuration ──────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CHROMA_PATH = os.path.join(BASE_DIR, "chroma_db")
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-LLM_MODEL = "qwen2.5:3b"
+LLM_MODEL = os.getenv("KRMAI_LLM_MODEL", "qwen2.5:3b")
 OLLAMA_BASE_URL = "http://localhost:11434"
+RETRIEVAL_K = int(os.getenv("KRMAI_RETRIEVAL_K", "8"))
+RETRIEVAL_FETCH_K = int(os.getenv("KRMAI_RETRIEVAL_FETCH_K", "32"))
+MIN_RELEVANCE_SCORE = float(os.getenv("KRMAI_MIN_RELEVANCE_SCORE", "0.20"))
+MIN_CONTEXT_CHARS = int(os.getenv("KRMAI_MIN_CONTEXT_CHARS", "120"))
+ENABLE_IMPLICIT_HISTORY = os.getenv("KRMAI_ENABLE_IMPLICIT_HISTORY", "0") == "1"
 
 OLLAMA_TIMEOUT = 300  # seconds — CPU inference can be slow
 
@@ -20,10 +42,56 @@ OLLAMA_TIMEOUT = 300  # seconds — CPU inference can be slow
 os.environ.setdefault("HF_HUB_OFFLINE", "1")
 os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 
+OUT_OF_SCOPE_MSG = (
+    "This question appears outside KRMU's knowledge base. "
+    "I don't have reliable information for that in the current university dataset."
+)
+
+INSUFFICIENT_CONTEXT_MSG = (
+    "I don't have enough reliable information in the current KRMU context "
+    "to answer this accurately. Please rephrase or ask a more specific question."
+)
+
+DOMAIN_KEYWORDS = {
+    "krmu", "k.r.", "mangalam", "university", "college", "campus", "school", "department",
+    "admission", "fee", "fees", "hostel", "placement", "placements", "recruiter", "scholarship",
+    "anti-ragging", "ragging", "bus", "route", "transport", "syllabus", "phd", "research",
+    "academic", "exam", "calendar", "library", "faculty", "program", "programme", "course",
+}
+
+TOPIC_HINTS = {
+    "placement": "krmu placements top placed students highest package recruiters",
+    "bus": "krmu bus routes timings transport",
+    "hostel": "krmu hostel facilities charges room types",
+    "scholarship": "krmu scholarship criteria scholarship process",
+    "fee": "krmu fee structure tuition annual fees",
+    "admission": "krmu admission process eligibility application",
+    "phd": "krmu phd admission regulations interview process",
+}
+
+TOPIC_SOURCE_HINTS = {
+    "placement": ["krmu_placements.txt", "placement-highlights.txt", "the-placements-process.txt"],
+    "bus": ["krmu_bus_routes.txt"],
+    "hostel": ["krmu_hostel.txt"],
+    "scholarship": ["krmu_scholarships.txt", "scholarship.txt"],
+    "fee": ["krmu_fee_structure.txt", "fee-structure.txt"],
+    "admission": ["krmu_admissions.txt", "admissions.txt"],
+    "phd": ["phd-admission.txt", "phd-regulations.txt"],
+}
+
+PLACEMENT_TOPPER_QUERY_RE = re.compile(
+    r"top\s+placed|placed\s+students|topper|highest\s+placed",
+    flags=re.IGNORECASE,
+)
+
+PLACEMENT_PACKAGE_QUERY_RE = re.compile(
+    r"highest\s+package|average\s+package|\bpackage\b|\blpa\b|\bctc\b",
+    flags=re.IGNORECASE,
+)
+
 # ── Slang / Abbreviation Dictionary ───────────────────────────
 # Maps common student slang and internet abbreviations to their
 # full forms so both retrieval and the LLM see clean text.
-import re
 
 SLANG_MAP = {
     # ── Single-letter replacements (careful word boundaries) ─────
@@ -362,6 +430,74 @@ def _format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
 
+def _is_domain_query(question: str) -> bool:
+    q = question.lower()
+    return any(keyword in q for keyword in DOMAIN_KEYWORDS)
+
+
+def _finalize_answer(text: str) -> str:
+    cleaned = _strip_think((text or "").strip())
+    if not cleaned:
+        return cleaned
+    if cleaned[-1] not in ".!?:)":
+        cleaned += "."
+    return cleaned
+
+
+def _placement_topper_facts() -> str:
+    """Extract concise topper rows from the curated placements source file."""
+    placements_path = os.path.join(BASE_DIR, "data", "krmu_placements.txt")
+    if not os.path.exists(placements_path):
+        return ""
+
+    try:
+        text = open(placements_path, "r", encoding="utf-8", errors="ignore").read()
+    except Exception:
+        return ""
+
+    rows = []
+    for line in text.splitlines():
+        # Keep markdown-table rows containing packages.
+        if "|" in line and "₹" in line:
+            rows.append(line.strip())
+
+    if not rows:
+        return ""
+
+    return "\n".join(rows[:8])
+
+
+def _placement_package_facts() -> str:
+    """Extract lines with concrete package values from placements data."""
+    placements_path = os.path.join(BASE_DIR, "data", "krmu_placements.txt")
+    if not os.path.exists(placements_path):
+        return ""
+
+    try:
+        text = open(placements_path, "r", encoding="utf-8", errors="ignore").read()
+    except Exception:
+        return ""
+
+    lines = []
+    for line in text.splitlines():
+        low = line.lower()
+        if "56.6" in low or "lpa" in low or "highest package" in low or "average package" in low:
+            cleaned = line.strip()
+            if cleaned:
+                lines.append(cleaned)
+
+    if not lines:
+        return ""
+
+    seen = set()
+    unique_lines = []
+    for line in lines:
+        if line not in seen:
+            unique_lines.append(line)
+            seen.add(line)
+    return "\n".join(unique_lines[:12])
+
+
 class RAGEngine:
     """Retrieval-Augmented Generation engine backed by ChromaDB + Ollama."""
 
@@ -374,6 +510,105 @@ class RAGEngine:
         self.max_history = 4    # Keep last 4 messages (2 Q&A pairs) — reduced for speed
         self.status = {"db": False, "ollama": False, "ready": False}
         self._initialize()
+
+    @staticmethod
+    def _doc_key(doc) -> str:
+        src = str(doc.metadata.get("source", "unknown"))
+        page = str(doc.metadata.get("page", "na"))
+        snippet = doc.page_content[:80].strip()
+        return f"{src}|{page}|{snippet}"
+
+    def _merge_unique_docs(self, docs: List, extra_docs: List) -> List:
+        seen = {self._doc_key(d) for d in docs}
+        merged = list(docs)
+        for doc in extra_docs:
+            key = self._doc_key(doc)
+            if key not in seen:
+                merged.append(doc)
+                seen.add(key)
+        return merged
+
+    def _augment_topic_docs(self, cleaned_question: str, docs: List) -> List:
+        q = cleaned_question.lower()
+        if not self.vector_store:
+            return docs
+
+        augmented = list(docs)
+        for topic, hint_query in TOPIC_HINTS.items():
+            if topic in q:
+                hint_docs = self.vector_store.similarity_search(hint_query, k=2)
+                augmented = self._merge_unique_docs(augmented, hint_docs)
+                for source_name in TOPIC_SOURCE_HINTS.get(topic, []):
+                    source_docs = self._get_docs_from_source(source_name, max_docs=8)
+                    augmented = self._merge_unique_docs(augmented, source_docs)
+        return augmented
+
+    def _get_docs_from_source(self, source_name: str, max_docs: int = 2) -> List[Document]:
+        if not self.vector_store:
+            return []
+        try:
+            items = self.vector_store.get(
+                where={"source": source_name},
+                include=["documents", "metadatas"],
+                limit=max_docs,
+            )
+        except Exception:
+            return []
+
+        docs = []
+        documents = items.get("documents") or []
+        metadatas = items.get("metadatas") or []
+        for idx, content in enumerate(documents):
+            metadata = metadatas[idx] if idx < len(metadatas) else {"source": source_name}
+            docs.append(Document(page_content=content, metadata=metadata or {"source": source_name}))
+        return docs
+
+    def _retrieve_docs(self, cleaned_question: str) -> List:
+        if not self.vector_store:
+            return []
+
+        # Use MMR for more diverse context coverage in multi-part questions.
+        docs = self.vector_store.max_marginal_relevance_search(
+            cleaned_question,
+            k=RETRIEVAL_K,
+            fetch_k=RETRIEVAL_FETCH_K,
+        )
+        docs = self._augment_topic_docs(cleaned_question, docs)
+        return docs
+
+    def _build_retrieval_query(self, cleaned_question: str) -> str:
+        """Add topic-specific hints so slang/informal questions retrieve better context."""
+        q = cleaned_question.lower()
+        hints = []
+        for topic, hint in TOPIC_HINTS.items():
+            if topic in q:
+                hints.append(hint)
+
+        if "placement" in q and ("package" in q or "highest" in q or "lpa" in q):
+            hints.append("krmu placements highest package 56.6 lpa top recruiters")
+
+        if not hints:
+            return cleaned_question
+
+        return f"{cleaned_question} {' '.join(hints[:2])}".strip()
+
+    def _has_relevant_context(self, cleaned_question: str) -> bool:
+        if not self.vector_store:
+            return False
+
+        scored: List[Tuple] = self.vector_store.similarity_search_with_relevance_scores(
+            cleaned_question,
+            k=3,
+        )
+        if not scored:
+            return False
+
+        best_score = max(score for _, score in scored)
+        threshold = MIN_RELEVANCE_SCORE
+        q = cleaned_question.lower()
+        if any(topic in q for topic in TOPIC_HINTS):
+            threshold = max(0.08, MIN_RELEVANCE_SCORE - 0.10)
+        return best_score >= threshold
 
     # ── Setup ──────────────────────────────────────────────────
     def _initialize(self):
@@ -418,15 +653,7 @@ class RAGEngine:
 
         # 4. RAG chain (using LCEL instead of deprecated RetrievalQA)
         if self.llm and self.retriever:
-            self.qa_chain = (
-                {
-                    "context": self.retriever | _format_docs,
-                    "question": RunnablePassthrough(),
-                }
-                | RAG_PROMPT
-                | self.llm
-                | StrOutputParser()
-            )
+            self.qa_chain = self.llm
             self.status["ready"] = True
 
     # ── Public API ─────────────────────────────────────────────
@@ -443,11 +670,21 @@ class RAGEngine:
         # Expand slang/abbreviations so retrieval finds the right docs
         cleaned_question = _expand_slang(question)
 
-        # Build chat history string from provided history or internal buffer
+        if not _is_domain_query(cleaned_question):
+            return {
+                "answer": OUT_OF_SCOPE_MSG,
+                "source_documents": [],
+            }
+
+        # By default, requests are stateless unless caller provides history.
+        use_history = bool(history) or ENABLE_IMPLICIT_HISTORY
         if history:
             self.chat_history = history[-self.max_history:]
+        elif not ENABLE_IMPLICIT_HISTORY:
+            self.chat_history = []
+
         chat_history_str = ""
-        if self.chat_history:
+        if use_history and self.chat_history:
             chat_history_str = "Recent conversation:\n"
             for msg in self.chat_history:
                 role = "Student" if msg["role"] == "user" else "Assistant"
@@ -456,23 +693,48 @@ class RAGEngine:
                 chat_history_str += f"{role}: {content}\n"
             chat_history_str += "\n"
 
-        # Retrieve source documents for citations
-        assert self.retriever is not None  # guaranteed when qa_chain is set
-        source_docs = self.retriever.invoke(cleaned_question)
+        retrieval_query = self._build_retrieval_query(cleaned_question)
+        source_docs = self._retrieve_docs(retrieval_query)
+        if not source_docs:
+            return {
+                "answer": INSUFFICIENT_CONTEXT_MSG,
+                "source_documents": [],
+            }
+
+        if not self._has_relevant_context(retrieval_query):
+            return {
+                "answer": INSUFFICIENT_CONTEXT_MSG,
+                "source_documents": source_docs,
+            }
 
         # Build prompt inputs and invoke LLM directly (not via chain — avoids double retrieval)
         context = _format_docs(source_docs)
+        if PLACEMENT_TOPPER_QUERY_RE.search(cleaned_question):
+            placement_facts = _placement_topper_facts()
+            if placement_facts:
+                context += "\n\nPlacement Topper Facts:\n" + placement_facts
+        if PLACEMENT_PACKAGE_QUERY_RE.search(cleaned_question):
+            package_facts = _placement_package_facts()
+            if package_facts:
+                context += "\n\nPlacement Package Facts:\n" + package_facts
+
+        if len(context.strip()) < MIN_CONTEXT_CHARS:
+            return {
+                "answer": INSUFFICIENT_CONTEXT_MSG,
+                "source_documents": source_docs,
+            }
+
         prompt_text = RAG_PROMPT.format(
             context=context,
             question=cleaned_question,
             chat_history=chat_history_str,
         )
-        answer = _strip_think(self.llm.invoke(prompt_text))
+        answer = _finalize_answer(self.llm.invoke(prompt_text))
 
-        # Update internal history
-        self.chat_history.append({"role": "user", "content": question})
-        self.chat_history.append({"role": "assistant", "content": answer})
-        self.chat_history = self.chat_history[-self.max_history:]
+        if use_history:
+            self.chat_history.append({"role": "user", "content": question})
+            self.chat_history.append({"role": "assistant", "content": answer})
+            self.chat_history = self.chat_history[-self.max_history:]
 
         return {
             "answer": answer,
@@ -487,10 +749,19 @@ class RAGEngine:
 
         cleaned_question = _expand_slang(question)
 
+        if not _is_domain_query(cleaned_question):
+            yield OUT_OF_SCOPE_MSG
+            self._last_source_docs = []
+            return
+
+        use_history = bool(history) or ENABLE_IMPLICIT_HISTORY
         if history:
             self.chat_history = history[-self.max_history:]
+        elif not ENABLE_IMPLICIT_HISTORY:
+            self.chat_history = []
+
         chat_history_str = ""
-        if self.chat_history:
+        if use_history and self.chat_history:
             chat_history_str = "Recent conversation:\n"
             for msg in self.chat_history:
                 role = "Student" if msg["role"] == "user" else "Assistant"
@@ -498,8 +769,28 @@ class RAGEngine:
                 chat_history_str += f"{role}: {content}\n"
             chat_history_str += "\n"
 
-        source_docs = self.retriever.invoke(cleaned_question)
+        retrieval_query = self._build_retrieval_query(cleaned_question)
+        source_docs = self._retrieve_docs(retrieval_query)
+        if not source_docs or not self._has_relevant_context(retrieval_query):
+            yield INSUFFICIENT_CONTEXT_MSG
+            self._last_source_docs = source_docs
+            return
+
         context = _format_docs(source_docs)
+        if PLACEMENT_TOPPER_QUERY_RE.search(cleaned_question):
+            placement_facts = _placement_topper_facts()
+            if placement_facts:
+                context += "\n\nPlacement Topper Facts:\n" + placement_facts
+        if PLACEMENT_PACKAGE_QUERY_RE.search(cleaned_question):
+            package_facts = _placement_package_facts()
+            if package_facts:
+                context += "\n\nPlacement Package Facts:\n" + package_facts
+
+        if len(context.strip()) < MIN_CONTEXT_CHARS:
+            yield INSUFFICIENT_CONTEXT_MSG
+            self._last_source_docs = source_docs
+            return
+
         prompt_text = RAG_PROMPT.format(
             context=context,
             question=cleaned_question,
@@ -529,12 +820,12 @@ class RAGEngine:
                 yield chunk
         
         # Final cleanup
-        full_answer = _strip_think(full_answer)
+        full_answer = _finalize_answer(full_answer)
 
-        # Update history after streaming completes
-        self.chat_history.append({"role": "user", "content": question})
-        self.chat_history.append({"role": "assistant", "content": full_answer})
-        self.chat_history = self.chat_history[-self.max_history:]
+        if use_history:
+            self.chat_history.append({"role": "user", "content": question})
+            self.chat_history.append({"role": "assistant", "content": full_answer})
+            self.chat_history = self.chat_history[-self.max_history:]
 
         # Attach source docs to a special attribute for the caller
         self._last_source_docs = source_docs

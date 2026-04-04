@@ -7,6 +7,17 @@ echo "=================================================="
 echo "  LLM Knowledge Retrieval System"
 echo "=================================================="
 
+# 0. Prefer conda 'rag' env if available
+PY_CMD=(python)
+PIP_CMD=(pip)
+if command -v conda &>/dev/null; then
+    if conda env list | awk '{print $1}' | grep -qx "rag"; then
+        PY_CMD=(conda run -n rag python)
+        PIP_CMD=(conda run -n rag pip)
+        echo "[INFO] Using conda environment: rag"
+    fi
+fi
+
 # 1. Check Ollama
 if ! command -v ollama &>/dev/null; then
     echo "[ERROR] Ollama not found. Install from https://ollama.com"
@@ -29,15 +40,15 @@ fi
 echo "[OK] Ollama is running with qwen2.5:3b"
 
 # 4. Check Python deps
-if ! python -c "import fastapi" &>/dev/null; then
+if ! "${PY_CMD[@]}" -c "import fastapi" &>/dev/null; then
     echo "[INFO] Installing Python dependencies..."
-    pip install -r requirements.txt
+    "${PIP_CMD[@]}" install -r requirements.txt
 fi
 
 # 5. Auto-ingest if no vector DB exists
 if [ ! -d "chroma_db" ] || [ -z "$(ls -A chroma_db 2>/dev/null)" ]; then
     echo "[INFO] No vector database found. Running ingestion..."
-    HF_HUB_OFFLINE=0 python ingest.py
+    HF_HUB_OFFLINE=0 "${PY_CMD[@]}" ingest.py
 fi
 
 # 6. Determine launch mode
@@ -57,15 +68,24 @@ else
     echo "=================================================="
 
     # Start FastAPI backend
-    HF_HUB_OFFLINE=1 python -m uvicorn api:app --host 0.0.0.0 --port 8000 --reload &
+    PY_WARN_FILTER="ignore:resource_tracker:UserWarning:multiprocessing.resource_tracker"
+    if [ -n "${PYTHONWARNINGS:-}" ]; then
+        PY_WARN_FILTER="$PYTHONWARNINGS,$PY_WARN_FILTER"
+    fi
+    PYTHONWARNINGS="$PY_WARN_FILTER" HF_HUB_OFFLINE=1 "${PY_CMD[@]}" -m uvicorn api:app --host 0.0.0.0 --port 8000 --reload &
     API_PID=$!
 
     # Start React frontend
     if [ -d "web-app" ]; then
         cd web-app
-        if [ ! -d "node_modules" ]; then
+        if [ ! -d "node_modules" ] || [ ! -f "node_modules/vite/dist/node/cli.js" ]; then
             echo "[INFO] Installing frontend dependencies..."
-            npm install
+            rm -rf node_modules
+            if [ -f "package-lock.json" ]; then
+                npm ci
+            else
+                npm install
+            fi
         fi
         npm run dev &
         FRONTEND_PID=$!

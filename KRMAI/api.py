@@ -6,10 +6,20 @@ from typing import List, Optional, Dict, Any
 from contextlib import asynccontextmanager
 import os
 import json
+import warnings
 
 # Set HuggingFace to offline mode before importing rag_engine
 os.environ.setdefault("HF_HUB_OFFLINE", "1")
 os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
+
+# LangChain can emit a known non-fatal warning on Python 3.14+ due to
+# deprecated Pydantic v1 compatibility internals.
+warnings.filterwarnings(
+    "ignore",
+    message=r"Core Pydantic V1 functionality isn't compatible with Python 3\.14 or greater\.",
+    category=UserWarning,
+    module=r"langchain_core\._api\.deprecation",
+)
 
 from rag_engine import RAGEngine
 
@@ -64,6 +74,9 @@ def chat(request: ChatRequest):
     """Processes a user message and returns the LLM response with sources."""
     if not rag_engine.status["ready"]:
         raise HTTPException(status_code=503, detail="RAG Engine is not ready. Check /health endpoint.")
+
+    if not request.message or not request.message.strip():
+        raise HTTPException(status_code=400, detail="Message cannot be empty.")
     
     # Convert history to list of dicts for the engine
     history = None
@@ -89,6 +102,9 @@ def chat_stream(request: ChatRequest):
     """Streaming endpoint — sends tokens as Server-Sent Events for real-time display."""
     if not rag_engine.status["ready"]:
         raise HTTPException(status_code=503, detail="RAG Engine is not ready.")
+
+    if not request.message or not request.message.strip():
+        raise HTTPException(status_code=400, detail="Message cannot be empty.")
 
     history = None
     if request.history:

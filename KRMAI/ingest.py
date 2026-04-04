@@ -6,26 +6,51 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
 # ── Configuration ──────────────────────────────────────────────
-DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
-CHROMA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "chroma_db")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "data")
+CHROMA_PATH = os.path.join(BASE_DIR, "chroma_db")
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 CHUNK_SIZE = 1500
 CHUNK_OVERLAP = 300
 
 
-def load_documents(data_dir):
-    """Loads PDFs, DOCX, and TXT files from the data directory."""
+def _collect_supported_files(source_dirs, supported):
+    """Recursively collects supported files from a list of source directories."""
+    collected = []
+    for source_dir in source_dirs:
+        if not os.path.exists(source_dir):
+            continue
+
+        for root, _, files in os.walk(source_dir):
+            for filename in files:
+                ext = os.path.splitext(filename)[1].lower()
+                if ext not in supported:
+                    continue
+                file_path = os.path.join(root, filename)
+                collected.append((source_dir, file_path, ext))
+
+    collected.sort(key=lambda item: item[1])
+    return collected
+
+
+def load_documents(source_dirs):
+    """Loads PDFs, DOCX, and TXT files from configured source directories."""
     documents = []
-    if not os.path.exists(data_dir):
-        os.makedirs(data_dir)
-        print(f"Created '{data_dir}' directory. Please add documents there.")
-        return []
 
     supported = {".pdf": PyPDFLoader, ".docx": Docx2txtLoader, ".txt": TextLoader}
-    for filename in sorted(os.listdir(data_dir)):
-        ext = os.path.splitext(filename)[1].lower()
-        file_path = os.path.join(data_dir, filename)
+    file_items = _collect_supported_files(source_dirs, supported)
+
+    if not os.path.exists(DATA_DIR):
+        os.makedirs(DATA_DIR)
+        print(f"Created '{DATA_DIR}' directory.")
+
+    if not file_items:
+        print("No supported documents found in configured source directories.")
+        return []
+
+    for source_dir, file_path, ext in file_items:
         loader_cls = supported.get(ext)
+        rel_source = os.path.relpath(file_path, source_dir)
         if loader_cls:
             try:
                 loader = loader_cls(file_path)
@@ -34,15 +59,13 @@ def load_documents(data_dir):
                 for doc in docs:
                     # Ensure metadata dict exists before assigning
                     if not hasattr(doc, "metadata") or doc.metadata is None:
-                        doc.metadata = {"source": filename}
+                        doc.metadata = {"source": rel_source}
                     else:
-                        doc.metadata["source"] = filename
+                        doc.metadata["source"] = rel_source
                 documents.extend(docs)
-                print(f"  Loaded: {filename} ({len(docs)} page(s))")
+                print(f"  Loaded: {rel_source} ({len(docs)} page(s))")
             except Exception as e:
-                print(f"  Error loading {filename}: {e}")
-        else:
-            print(f"  Skipping unsupported file: {filename}")
+                print(f"  Error loading {rel_source}: {e}")
 
     return documents
 
@@ -83,11 +106,16 @@ def create_vector_store(chunks):
 
 
 def main():
+    source_dirs = [DATA_DIR]
+
     print(f"{'=' * 50}")
     print(f"  Document Ingestion Pipeline")
     print(f"{'=' * 50}")
-    print(f"\nLoading documents from {DATA_DIR}...")
-    documents = load_documents(DATA_DIR)
+    print("\nLoading documents from sources:")
+    for source_dir in source_dirs:
+        print(f"  - {source_dir}")
+
+    documents = load_documents(source_dirs)
 
     if documents:
         print(f"\nTotal: {len(documents)} document pages loaded.")

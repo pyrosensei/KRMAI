@@ -1,0 +1,4217 @@
+{
+  "summary": {
+    "total": 200,
+    "passed": 152,
+    "failed": 48,
+    "accuracy_percent": 76.0,
+    "avg_latency_sec": 2.39,
+    "p95_latency_sec": 6.914
+  },
+  "by_category": {
+    "Admissions": {
+      "total": 25,
+      "passed": 22,
+      "failed": 3,
+      "accuracy": 88.0
+    },
+    "Fees / Scholarships": {
+      "total": 25,
+      "passed": 21,
+      "failed": 4,
+      "accuracy": 84.0
+    },
+    "Placements": {
+      "total": 25,
+      "passed": 19,
+      "failed": 6,
+      "accuracy": 76.0
+    },
+    "Campus / Hostel / Transport": {
+      "total": 25,
+      "passed": 18,
+      "failed": 7,
+      "accuracy": 72.0
+    },
+    "Academics / Policies / PhD": {
+      "total": 25,
+      "passed": 13,
+      "failed": 12,
+      "accuracy": 52.0
+    },
+    "Student Life / Support": {
+      "total": 25,
+      "passed": 13,
+      "failed": 12,
+      "accuracy": 52.0
+    },
+    "Multi-topic": {
+      "total": 25,
+      "passed": 21,
+      "failed": 4,
+      "accuracy": 84.0
+    },
+    "Outside / Guardrail": {
+      "total": 25,
+      "passed": 25,
+      "failed": 0,
+      "accuracy": 100.0
+    }
+  },
+  "failed_samples": [
+    {
+      "category": "Admissions",
+      "question": "Can I apply for multiple programmes at once?",
+      "reason": "missing_keywords",
+      "answer_preview": "I don't have enough reliable information in the current KRMU context to answer this accurately. Please rephrase or ask a more specific question."
+    },
+    {
+      "category": "Admissions",
+      "question": "How will I know if I am selected?",
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "category": "Admissions",
+      "question": "Is lateral entry available in technical programmes?",
+      "reason": "missing_keywords",
+      "answer_preview": "I don't have enough reliable information in the current KRMU context to answer this accurately. Please rephrase or ask a more specific question."
+    },
+    {
+      "category": "Fees / Scholarships",
+      "question": "How can I check my payment status?",
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "category": "Fees / Scholarships",
+      "question": "What financial assistance options are available?",
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "category": "Fees / Scholarships",
+      "question": "Who is the helpdesk contact for payment-related issues?",
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "category": "Fees / Scholarships",
+      "question": "When should the first installment be paid after selection?",
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "category": "Placements",
+      "question": "What is the role of Career Development Center?",
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "category": "Placements",
+      "question": "How often do companies visit for campus drives?",
+      "reason": "missing_keywords",
+      "answer_preview": "I don't have enough reliable information in the current KRMU context to answer this accurately. Please rephrase or ask a more specific question."
+    },
+    {
+      "category": "Placements",
+      "question": "Do students get resume and interview preparation support?",
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "category": "Placements",
+      "question": "Can students withdraw midway from a recruitment process?",
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "category": "Placements",
+      "question": "Are aptitude and technical trainings available?",
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "category": "Placements",
+      "question": "Do students receive maths aptitude preparation?",
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "category": "Campus / Hostel / Transport",
+      "question": "What sports facilities are available at KRMU?",
+      "reason": "missing_keywords",
+      "answer_preview": "At KRMU, the Sports Club offers athletic competitions and fitness activities. The specific sports facilities available include inter-university sports events such as cricket, football, basketball, badminton, and chess.\n\nThe Sports Club is managed by Mr. Puneet Kumar as Director a"
+    },
+    {
+      "category": "Campus / Hostel / Transport",
+      "question": "How many labs are available for students?",
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "category": "Campus / Hostel / Transport",
+      "question": "Where exactly is KRMU located?",
+      "reason": "missing_keywords",
+      "answer_preview": "KRMU's location details are not provided in the given context."
+    },
+    {
+      "category": "Campus / Hostel / Transport",
+      "question": "How far is KRMU from Delhi airport?",
+      "reason": "missing_keywords",
+      "answer_preview": "K.R. Mangalam University is just an hour drive from Delhi International Airport. Students need to book their tickets after obtaining a valid student visa from the Indian Embassy or High Commission."
+    },
+    {
+      "category": "Campus / Hostel / Transport",
+      "question": "Are smart classrooms available at KRMU?",
+      "reason": "missing_keywords",
+      "answer_preview": "Yes, smart classrooms are available at KRMU. They feature ergonomic seating arrangements, interactive smart boards and projectors, and high-speed Wi-Fi connectivity in all classrooms."
+    },
+    {
+      "category": "Campus / Hostel / Transport",
+      "question": "What are the major campus life highlights?",
+      "reason": "missing_keywords",
+      "answer_preview": "I don't have enough reliable information in the current KRMU context to answer this accurately. Please rephrase or ask a more specific question."
+    },
+    {
+      "category": "Campus / Hostel / Transport",
+      "question": "What should new students know about campus access and movement?",
+      "reason": "missing_keywords",
+      "answer_preview": "I don't have enough reliable information in the current KRMU context to answer this accurately. Please rephrase or ask a more specific question."
+    }
+  ],
+  "results": [
+    {
+      "question": "How can I apply for admission at KRMU?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 13.667,
+      "found_keywords": [
+        "admission",
+        "apply",
+        "application",
+        "eligibility",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "missing_keywords": [],
+      "sources_count": 9,
+      "reason": "ok",
+      "answer_preview": "To apply for admission at K.R. Mangalam University (KRMU), you can follow these steps:\n\n1. **Visit the Official Website**: Go to the official website of K.R. Mangalam University, which is [admissions.krmangalam.edu.in](http://admissions.krmangalam.edu.in). This will be your prima"
+    },
+    {
+      "question": "What is the eligibility for BTech admission at KRMU?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.094,
+      "found_keywords": [
+        "admission",
+        "eligibility"
+      ],
+      "missing_keywords": [
+        "apply",
+        "application",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 10,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided in the given text, there's no specific mention of eligibility criteria for BTech (Bachelor of Technology) admission at K.R. Mangalam University (KRMU). The text primarily discusses other programs like B.Ed., Diploma in Pharmacy, and UG, PG, Ph.D."
+    },
+    {
+      "question": "Is there an entrance exam for admission?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.588,
+      "found_keywords": [
+        "admission",
+        "application",
+        "offer"
+      ],
+      "missing_keywords": [
+        "apply",
+        "eligibility",
+        "interview",
+        "enroll"
+      ],
+      "sources_count": 10,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided in the text, it does not explicitly state whether K.R. Mangalam University (KRMU) offers an entrance exam for admissions. The text mentions that applicants need to pay a required application fee of \u20b91000 and appear for the K.R. Mangalam Universit"
+    },
+    {
+      "question": "What is KREE in the admission process?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.766,
+      "found_keywords": [
+        "admission",
+        "apply",
+        "eligibility"
+      ],
+      "missing_keywords": [
+        "application",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 9,
+      "reason": "ok",
+      "answer_preview": "KREE stands for \"K.R. Mangalam University Entrance Exam.\" It is a crucial part of the admission process at K.R. Mangalam University, where candidates apply to various undergraduate (UG), postgraduate (PG), doctoral (Ph.D.), or diploma programmes. The exam evaluates the eligibilit"
+    },
+    {
+      "question": "What documents are required for admission?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 5.069,
+      "found_keywords": [
+        "admission",
+        "application"
+      ],
+      "missing_keywords": [
+        "apply",
+        "eligibility",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 10,
+      "reason": "ok",
+      "answer_preview": "For admission to K.R. Mangalam University (KRMU), the following documents are typically required:\n\n1. **Application Form**: This usually needs to be filled out and submitted along with other supporting documents.\n\n2. **Proof of Age**: Usually in the form of a government-issued ID"
+    },
+    {
+      "question": "What is the application fee for admission?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.919,
+      "found_keywords": [
+        "admission",
+        "application"
+      ],
+      "missing_keywords": [
+        "apply",
+        "eligibility",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 10,
+      "reason": "ok",
+      "answer_preview": "The application fee for admission to K.R. Mangalam University is \u20b91,000."
+    },
+    {
+      "question": "When does the admission process usually start?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.837,
+      "found_keywords": [
+        "admission",
+        "application",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "missing_keywords": [
+        "apply",
+        "eligibility"
+      ],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided in the text, the specific starting dates for the admission process are not detailed. However, we can infer some general timing from the structure of the document:\n\n1. The document mentions \"Step Into A Successful Future With K.R. Mangalam Univers"
+    },
+    {
+      "question": "Can international students apply at KRMU?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.471,
+      "found_keywords": [
+        "admission",
+        "apply",
+        "application"
+      ],
+      "missing_keywords": [
+        "eligibility",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided, it is not explicitly stated whether international students can apply to KRMU or not. The details given are primarily focused on admissions for Indian B.Pharmacy graduates and postgraduate pharmacy programs (M.Pharm). \n\nTo definitively answer thi"
+    },
+    {
+      "question": "Can I apply for multiple programmes at once?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.011,
+      "found_keywords": [],
+      "missing_keywords": [
+        "admission",
+        "apply",
+        "application",
+        "eligibility",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 7,
+      "reason": "missing_keywords",
+      "answer_preview": "I don't have enough reliable information in the current KRMU context to answer this accurately. Please rephrase or ask a more specific question."
+    },
+    {
+      "question": "Is there a counselling process before final admission?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.129,
+      "found_keywords": [
+        "admission",
+        "application"
+      ],
+      "missing_keywords": [
+        "apply",
+        "eligibility",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 10,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided in the given text, there is no explicit mention of a counseling process before final admission to K.R. Mangalam University or KRMU (K.R. Mangalam University). The text focuses mainly on the application and admission processes for various programs"
+    },
+    {
+      "question": "How will I know if I am selected?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "admission",
+        "apply",
+        "application",
+        "eligibility",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "What are the admission office hours?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.709,
+      "found_keywords": [
+        "admission"
+      ],
+      "missing_keywords": [
+        "apply",
+        "application",
+        "eligibility",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 9,
+      "reason": "ok",
+      "answer_preview": "The admission office hours at K.R. Mangalamalam University (KRMU) are as follows:\n\n- Admission Office Hours: 9 AM to 5 PM Monday through Friday\n\nThis is a general representation based on common practices for university admissions offices. For precise and up-to-date information, i"
+    },
+    {
+      "question": "Where can I apply for UG, PG, and PhD programmes?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.118,
+      "found_keywords": [
+        "admission",
+        "apply",
+        "application"
+      ],
+      "missing_keywords": [
+        "eligibility",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 11,
+      "reason": "ok",
+      "answer_preview": "To apply for Undergraduate (UG), Postgraduate (PG), or PhD programmes at K.R. Mangalam University, you should visit the university's official website. Typically, universities have a dedicated section on their site where they provide application procedures, deadlines, required doc"
+    },
+    {
+      "question": "Does KRMU offer diploma courses?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.159,
+      "found_keywords": [
+        "offer"
+      ],
+      "missing_keywords": [
+        "admission",
+        "apply",
+        "application",
+        "eligibility",
+        "interview",
+        "enroll"
+      ],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "Yes, KRMU offers diploma courses. Specifically, it mentions that KRMU provides diploma courses which include M.Pharm (Master of Pharmacy)."
+    },
+    {
+      "question": "What is the PhD admission process?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 5.046,
+      "found_keywords": [
+        "admission",
+        "apply",
+        "application",
+        "eligibility",
+        "interview",
+        "offer"
+      ],
+      "missing_keywords": [
+        "enroll"
+      ],
+      "sources_count": 12,
+      "reason": "ok",
+      "answer_preview": "The PhD admission process at K.R. Mangalam University involves several key steps:\n\n1. **Eligibility Criteria**: Candidates must meet specific eligibility criteria, which typically include a Master's degree in relevant fields and sometimes additional requirements like research exp"
+    },
+    {
+      "question": "Does KRMU offer part-time PhD options?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.474,
+      "found_keywords": [
+        "eligibility",
+        "offer"
+      ],
+      "missing_keywords": [
+        "admission",
+        "apply",
+        "application",
+        "interview",
+        "enroll"
+      ],
+      "sources_count": 11,
+      "reason": "ok",
+      "answer_preview": "Yes, K.R. Mangalam University offers both full time and part time Ph.D. programs. The information provided indicates that they have a dedicated program for part-time scholars as well as full-time ones.\n\nSpecifically:\n\n- They mention \"Full Time Scholars\" in the eligibility criteri"
+    },
+    {
+      "question": "Is personal interview mandatory for PhD admission?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.026,
+      "found_keywords": [
+        "admission",
+        "application",
+        "interview"
+      ],
+      "missing_keywords": [
+        "apply",
+        "eligibility",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 12,
+      "reason": "ok",
+      "answer_preview": "Yes, a personal interview is typically a part of the admission process for PhD programs at K.R. Mangalam University. The specific details can vary depending on the department and year, but generally, candidates are required to undergo a personal interview as part of their applica"
+    },
+    {
+      "question": "How many steps are there in the KRMU admission journey?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.146,
+      "found_keywords": [
+        "admission",
+        "application",
+        "interview",
+        "offer"
+      ],
+      "missing_keywords": [
+        "apply",
+        "eligibility",
+        "enroll"
+      ],
+      "sources_count": 9,
+      "reason": "ok",
+      "answer_preview": "The KRMU (K.R. Mangalam University) admission journey involves 6 simple steps:\n\n1. Pay the required application fee of \u20b91,000.\n2. Appear for the K.R. Mangalam University Entrance Exam.\n3. Attend our Faculty-Led Interview.\n4. Receive the offer letter after a successful personal in"
+    },
+    {
+      "question": "What does the admission offer letter include?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.807,
+      "found_keywords": [
+        "admission",
+        "enroll",
+        "offer"
+      ],
+      "missing_keywords": [
+        "apply",
+        "application",
+        "eligibility",
+        "interview"
+      ],
+      "sources_count": 9,
+      "reason": "ok",
+      "answer_preview": "The admission offer letter typically includes several important details and expectations for new students. While specifics can vary depending on the institution, a standard admission offer letter usually includes:\n\n1. **Confirmation of Admission**: The letter formally confirms th"
+    },
+    {
+      "question": "Can I book a campus visit before applying?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.513,
+      "found_keywords": [
+        "admission"
+      ],
+      "missing_keywords": [
+        "apply",
+        "application",
+        "eligibility",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "No, booking a campus visit is not mentioned in the given information. The provided details are related to admission procedures, academic calendar, placement process, and student life at K.R. Mangalam University (KRMU). For booking a campus visit, you would need to contact the Int"
+    },
+    {
+      "question": "Whom should I contact for admission support?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.098,
+      "found_keywords": [
+        "admission",
+        "application"
+      ],
+      "missing_keywords": [
+        "apply",
+        "eligibility",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 10,
+      "reason": "ok",
+      "answer_preview": "For admission support, you should contact the Admissions Office at K.R. Mangalam University (KRMU). They are responsible for guiding applicants through the application process and answering any questions about programs, requirements, and procedures.\n\nYou can reach out to them via"
+    },
+    {
+      "question": "Is there an admission FAQ page for common doubts?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.222,
+      "found_keywords": [
+        "admission"
+      ],
+      "missing_keywords": [
+        "apply",
+        "application",
+        "eligibility",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 9,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided in the given text, it does not explicitly state whether there is a specific admission FAQ page for common doubts. The text covers various aspects of K.R. Mangalam University's admissions process and programs but does not mention anything about an"
+    },
+    {
+      "question": "Can I get admission after the regular joining date?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.365,
+      "found_keywords": [
+        "admission",
+        "apply",
+        "application",
+        "offer"
+      ],
+      "missing_keywords": [
+        "eligibility",
+        "interview",
+        "enroll"
+      ],
+      "sources_count": 10,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided in the text, there is no specific mention of whether admission can be obtained after the regular joining date. The focus seems to be on the process and benefits of applying for admission at K.R. Mangalam University rather than details about late "
+    },
+    {
+      "question": "Is lateral entry available in technical programmes?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.011,
+      "found_keywords": [],
+      "missing_keywords": [
+        "admission",
+        "apply",
+        "application",
+        "eligibility",
+        "interview",
+        "enroll",
+        "offer"
+      ],
+      "sources_count": 6,
+      "reason": "missing_keywords",
+      "answer_preview": "I don't have enough reliable information in the current KRMU context to answer this accurately. Please rephrase or ask a more specific question."
+    },
+    {
+      "question": "What is the difference between registration and enrollment at KRMU?",
+      "category": "Admissions",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.892,
+      "found_keywords": [
+        "enroll",
+        "offer"
+      ],
+      "missing_keywords": [
+        "admission",
+        "apply",
+        "application",
+        "eligibility",
+        "interview"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "The terms \"registration\" and \"enrollment\" are often used interchangeably in educational settings, but they can have slightly different meanings depending on the institution's policies. Here\u2019s a breakdown of how these might be applied to KRMU (K.R. Mangalam University):\n\n1. **Enro"
+    },
+    {
+      "question": "What is the fee structure for BTech CSE?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.016,
+      "found_keywords": [
+        "fee",
+        "fees"
+      ],
+      "missing_keywords": [
+        "payment",
+        "scholarship",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided in the document, there isn't a specific section detailing the fee structure for BTech CSE (Computer Science and Engineering). The details given are for other programs such as M.Pharm., Ph.D., and Hostel fees. For BTech CSE, we would need to look "
+    },
+    {
+      "question": "How much are the application and registration fees?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.603,
+      "found_keywords": [
+        "fee",
+        "fees",
+        "scholarship"
+      ],
+      "missing_keywords": [
+        "payment",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "The application and registration fees for admission to various programs at KR Mangalam University include:\n\n- **Undergraduate Scholarships (Part A)**:\n  - Application and Registration Fee: Not specified in the given information, but it's part of the overall fee structure which in"
+    },
+    {
+      "question": "What is the annual hostel fee?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.108,
+      "found_keywords": [
+        "fee"
+      ],
+      "missing_keywords": [
+        "fees",
+        "payment",
+        "scholarship",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "The annual hostel fee at K.R. Mangalam University (KRMU) is Rs. 1,72,000."
+    },
+    {
+      "question": "Is hostel security refundable and how much is it?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.164,
+      "found_keywords": [
+        "refund"
+      ],
+      "missing_keywords": [
+        "fee",
+        "fees",
+        "payment",
+        "scholarship",
+        "financial",
+        "loan"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Yes, the hostel security at K.R. Mangalam University is refundable. The amount for the hostel security is Rs. 10,000."
+    },
+    {
+      "question": "What payment options are available at KRMU?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.851,
+      "found_keywords": [
+        "fee",
+        "fees",
+        "payment"
+      ],
+      "missing_keywords": [
+        "scholarship",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "At K.R. Mangalam University (KRMU), the following payment options are available for fees:\n\n- **Online Fee Payment Options**:\n  - For new students in Semester 1.\n  - For existing students from Semester 2 onwards.\n\n- **Offline Fee Payment Options**:\n  1. Debit/Credit Card swipe at "
+    },
+    {
+      "question": "What should I do if fee payment fails?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.663,
+      "found_keywords": [
+        "fee",
+        "fees",
+        "payment",
+        "financial",
+        "refund"
+      ],
+      "missing_keywords": [
+        "scholarship",
+        "loan"
+      ],
+      "sources_count": 9,
+      "reason": "ok",
+      "answer_preview": "If your fee payment fails, you should contact the Accounts Office immediately. They can provide guidance on how to resolve the issue and ensure that your fees are processed correctly. Here are some steps you might consider:\n\n1. **Contact Registrar's Office**: Reach out via email "
+    },
+    {
+      "question": "How can I check my payment status?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "fee",
+        "fees",
+        "payment",
+        "scholarship",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Does KRMU have a refund policy for fees?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.961,
+      "found_keywords": [
+        "fee",
+        "fees",
+        "refund"
+      ],
+      "missing_keywords": [
+        "payment",
+        "scholarship",
+        "financial",
+        "loan"
+      ],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "Yes, KRMU does have a refund policy for fees. The specific details are as follows:\n\n1. **For 2nd and 3rd Installments**: Students must fulfill all criteria to receive refunds:\n   - Minimum 75% attendance in the preceding semester.\n   - Cleared ALL offered subjects (no backlogs).\n"
+    },
+    {
+      "question": "Can the fee increase in subsequent years?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.797,
+      "found_keywords": [
+        "fee",
+        "fees"
+      ],
+      "missing_keywords": [
+        "payment",
+        "scholarship",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Yes, the fees can increase in subsequent years. The policy states that \"The fee payable in subsequent years may increase up to 10% per annum, subject to approval by the competent authority.\" This means that there is a potential for annual increases of up to 10%, provided that thi"
+    },
+    {
+      "question": "What financial assistance options are available?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "fee",
+        "fees",
+        "payment",
+        "scholarship",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Does KRMU help students with education loans?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.07,
+      "found_keywords": [
+        "fee",
+        "fees",
+        "scholarship",
+        "financial",
+        "loan"
+      ],
+      "missing_keywords": [
+        "payment",
+        "refund"
+      ],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "Yes, KR Mangalam University (KRMU) helps students with education loans and scholarships to make their educational pursuits more accessible. The university offers various scholarship programs based on merit, entrance exams, category-based criteria, and financial need. These schola"
+    },
+    {
+      "question": "What are scholarship criteria for UG students?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.663,
+      "found_keywords": [
+        "fee",
+        "fees",
+        "scholarship"
+      ],
+      "missing_keywords": [
+        "payment",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 5,
+      "reason": "ok",
+      "answer_preview": "For Undergraduate (UG) students, the scholarship criteria at K.R. Mangalam University typically include:\n\n1. **Marks in Class XII Examination**: \n   - Students who score 90% or above in their Class XII examination will receive a full scholarship of 100%.\n   - Students with marks "
+    },
+    {
+      "question": "How much scholarship is offered for 90% in Class 12?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.472,
+      "found_keywords": [
+        "scholarship"
+      ],
+      "missing_keywords": [
+        "fee",
+        "fees",
+        "payment",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "For students scoring 90% or above in their Class XII examination, the scholarship offered under Part A of the Undergraduate (UG) Programme at K.R. Mangalam University is 100%.\n\nThe details state that such students will be required to pay the scholarship amount in three instalment"
+    },
+    {
+      "question": "How are scholarship installments released?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 5.105,
+      "found_keywords": [
+        "fee",
+        "payment",
+        "scholarship"
+      ],
+      "missing_keywords": [
+        "fees",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "For the scholarship installment structure mentioned in the document, here's how it breaks down:\n\n- **Part A (On The Basis of Marks Scored in Class XII Examination):**\n  - For students with marks scored between 90% and above:\n    - First Installment (25%) will be paid upfront post"
+    },
+    {
+      "question": "Does KRMU provide sports scholarships?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.922,
+      "found_keywords": [
+        "scholarship"
+      ],
+      "missing_keywords": [
+        "fee",
+        "fees",
+        "payment",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Yes, KRMU does provide sports scholarships. The information provided mentions a section for \"Sports Scholarship\" in the document, indicating that such awards are available to students who meet specific criteria related to their athletic performance or involvement.\n\nWhile the exac"
+    },
+    {
+      "question": "Can a student use multiple scholarships at the same time?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.509,
+      "found_keywords": [
+        "scholarship"
+      ],
+      "missing_keywords": [
+        "fee",
+        "fees",
+        "payment",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "No, a student cannot use multiple scholarships at the same time as per the information provided in the table for Undergraduate (UG) Programme Scholarship 2026 Intake. The table specifies that only the first 100 students will be considered for each scholarship category and they ar"
+    },
+    {
+      "question": "Is scholarship first-come-first-served for first 100 students?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.473,
+      "found_keywords": [
+        "scholarship"
+      ],
+      "missing_keywords": [
+        "fee",
+        "fees",
+        "payment",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Yes, the scholarship is designed to be \"Only For First 100 students, First Come First Served.\" This indicates that only the first 100 applicants will receive the scholarship, and they will be awarded based on a first-come-first-served basis."
+    },
+    {
+      "question": "When is scholarship document verification done?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.699,
+      "found_keywords": [
+        "fee",
+        "scholarship"
+      ],
+      "missing_keywords": [
+        "fees",
+        "payment",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided in the table, scholarship document verification is done \"post documents verification\" for both Part A (Merit-Based Scholarships) and Part B (Category-Based Scholarships). Specifically:\n\n- For Part A scholarships (90% and above), 1st installment o"
+    },
+    {
+      "question": "Is attendance required to continue scholarship benefits?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.339,
+      "found_keywords": [
+        "scholarship"
+      ],
+      "missing_keywords": [
+        "fee",
+        "fees",
+        "payment",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "Yes, attendance is required to continue scholarship benefits. According to the information provided in the document, students must ensure that their attendance in the immediately preceding semester is 75% or above to be eligible for continuation of scholarship benefits."
+    },
+    {
+      "question": "What are M.Pharm programme fees at KRMU?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.956,
+      "found_keywords": [
+        "fee"
+      ],
+      "missing_keywords": [
+        "fees",
+        "payment",
+        "scholarship",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 5,
+      "reason": "ok",
+      "answer_preview": "The M.Pharm (Master of Pharmacy) programme at KR Mangalam University (KRMU), also known as KRMU or KR Mangalam University, has the following annual fee structure:\n\n- Annual Fee: Rs. 1,30,000\n\nIt's important to note that there might be a clause stating that the fee payable in subs"
+    },
+    {
+      "question": "What is the per-semester fee format for international admissions?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.129,
+      "found_keywords": [
+        "fee",
+        "fees"
+      ],
+      "missing_keywords": [
+        "payment",
+        "scholarship",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 9,
+      "reason": "ok",
+      "answer_preview": "The question about the specific per-semester fee format for international admissions does not have a clear answer based on the information provided in the given text. The text primarily focuses on K.R. Mangalam University's admission process, programs, and features without provid"
+    },
+    {
+      "question": "Who is the helpdesk contact for payment-related issues?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "fee",
+        "fees",
+        "payment",
+        "scholarship",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "How do existing students pay semester fees?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.455,
+      "found_keywords": [
+        "fee",
+        "fees",
+        "payment"
+      ],
+      "missing_keywords": [
+        "scholarship",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 9,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided in the fee structure details for KR Mangalam University, existing students who are paying semester fees can do so through a few methods:\n\n1. **Online Payment via University Portal**: They can use Unified Payments Interface (UPI), Net Banking, or "
+    },
+    {
+      "question": "When should the first installment be paid after selection?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "fee",
+        "fees",
+        "payment",
+        "scholarship",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Are there any additional charges beyond tuition fee?",
+      "category": "Fees / Scholarships",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.942,
+      "found_keywords": [
+        "fee",
+        "fees"
+      ],
+      "missing_keywords": [
+        "payment",
+        "scholarship",
+        "financial",
+        "loan",
+        "refund"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Yes, there are additional charges beyond the tuition fee. These include:\n\n1. **Hostel Fees**: The document mentions that hostel fees are Rs. 1,72,000 per annum.\n   \n2. **Transport Fees**: There is also a mention of transport fees being Rs. 54,000 per annum for full transport and "
+    },
+    {
+      "question": "What is the highest package at KRMU?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.63,
+      "found_keywords": [
+        "package",
+        "lpa"
+      ],
+      "missing_keywords": [
+        "placement",
+        "recruit",
+        "company",
+        "career",
+        "cdc"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "The highest package at KRMU is \u20b956.6 LPA (Lakhs Per Annum), which was received by a student who graduated with an M.Tech program and worked for Ferrari.\n\nThis information can be found in the table provided, under the \"Package (LPA)\" column for the student named Rishav Bakshi."
+    },
+    {
+      "question": "What is the average placement package?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.869,
+      "found_keywords": [
+        "placement",
+        "package",
+        "recruit",
+        "lpa"
+      ],
+      "missing_keywords": [
+        "company",
+        "career",
+        "cdc"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "To calculate the average placement cell campus recruitment package, we need to sum up all the packages and then divide by the number of students.\n\nHere are the packages for each student:\n\n- Rishav Bakshi: \u20b956.6 LPA\n- Vineet Verma: \u20b934 LPA\n- Shourya Tyagi: \u20b934 LPA\n- Daksh Mehta: \u20b9"
+    },
+    {
+      "question": "Who are the top placed students at KRMU?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.002,
+      "found_keywords": [
+        "package",
+        "lpa"
+      ],
+      "missing_keywords": [
+        "placement",
+        "recruit",
+        "company",
+        "career",
+        "cdc"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "The top placed students at K.R. Mangalam University (KRMU) based on the provided information include:\n\n- Rishav Bakshi with a package of \u20b956.6 LPA from Ferrari.\n- Vineet Verma and Shourya Tyagi both with a package of \u20b934 LPA from Autodesk.\n- Daksh Mehta with a package of \u20b936 LPA "
+    },
+    {
+      "question": "How many recruiters visit KRMU campus?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.863,
+      "found_keywords": [
+        "recruit"
+      ],
+      "missing_keywords": [
+        "placement",
+        "package",
+        "company",
+        "career",
+        "lpa",
+        "cdc"
+      ],
+      "sources_count": 5,
+      "reason": "ok",
+      "answer_preview": "The total number of Campus Recruiters visiting KRMU is 800+."
+    },
+    {
+      "question": "Which prominent companies recruit from KRMU?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.093,
+      "found_keywords": [
+        "recruit"
+      ],
+      "missing_keywords": [
+        "placement",
+        "package",
+        "company",
+        "career",
+        "lpa",
+        "cdc"
+      ],
+      "sources_count": 5,
+      "reason": "ok",
+      "answer_preview": "The prominent companies that regularly recruit from KRMU include:\n\n- Technology & Engineering: HCL, TCS, Autodesk, Hughes Systique, Cargo Flash, InspireOne, Star, Akal, Infosys, Wipro, Tech Mahindra, Capgemini, Cognizant\n- Automotive: Ferrari\n- Media: The Hindu, CyberMedia, Ergo "
+    },
+    {
+      "question": "What are the stages in KRMU placement process?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.593,
+      "found_keywords": [
+        "placement",
+        "recruit",
+        "career"
+      ],
+      "missing_keywords": [
+        "package",
+        "company",
+        "lpa",
+        "cdc"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "The placement cell at KRMU (K.R. Mangalam University) follows a structured campus recruitment process that typically includes the following stages:\n\n1. **Application Submission**: Students submit their applications through the university's portal or designated forms.\n\n2. **Pre-Se"
+    },
+    {
+      "question": "What is a pre-placement talk?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.825,
+      "found_keywords": [
+        "placement",
+        "recruit",
+        "company",
+        "career",
+        "cdc"
+      ],
+      "missing_keywords": [
+        "package",
+        "lpa"
+      ],
+      "sources_count": 5,
+      "reason": "ok",
+      "answer_preview": "A Pre-Placement Cell (PPC) campus recruitment talk is an event organized by the Career Development Center (CDC) or similar student support services at many universities. These talks are designed to provide students with information about upcoming job and internship opportunities,"
+    },
+    {
+      "question": "Does KRMU conduct mock tests for placements?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.602,
+      "found_keywords": [
+        "placement",
+        "career",
+        "cdc"
+      ],
+      "missing_keywords": [
+        "package",
+        "recruit",
+        "company",
+        "lpa"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided, it doesn't explicitly state that KRMU conducts mock tests for placements. However, there are several initiatives and programs mentioned in the Career Development Center (CDC) section that could be related to placement preparation:\n\n1. **Technica"
+    },
+    {
+      "question": "What placement training does CDC provide?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 5.937,
+      "found_keywords": [
+        "recruit",
+        "career",
+        "cdc"
+      ],
+      "missing_keywords": [
+        "placement",
+        "package",
+        "company",
+        "lpa"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "The Career Development Center (CDC) provides various types of campus recruitment training for students, including:\n\n1. **Communication Skills Training**: Enhances collaborative skills through communication modules that cover verbal and non-verbal aspects, focusing on English prof"
+    },
+    {
+      "question": "What is the role of Career Development Center?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.003,
+      "found_keywords": [],
+      "missing_keywords": [
+        "placement",
+        "package",
+        "recruit",
+        "company",
+        "career",
+        "lpa",
+        "cdc"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "How often do companies visit for campus drives?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.014,
+      "found_keywords": [],
+      "missing_keywords": [
+        "placement",
+        "package",
+        "recruit",
+        "company",
+        "career",
+        "lpa",
+        "cdc"
+      ],
+      "sources_count": 8,
+      "reason": "missing_keywords",
+      "answer_preview": "I don't have enough reliable information in the current KRMU context to answer this accurately. Please rephrase or ask a more specific question."
+    },
+    {
+      "question": "Does KRMU have an online placement portal?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.559,
+      "found_keywords": [
+        "placement",
+        "recruit"
+      ],
+      "missing_keywords": [
+        "package",
+        "company",
+        "career",
+        "lpa",
+        "cdc"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided, it does not explicitly state whether KRMU (possibly referring to King's College London or another institution) has an online placement cell campus recruitment portal. The details given focus more on the procedures and policies for student partic"
+    },
+    {
+      "question": "Do students get resume and interview preparation support?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "placement",
+        "package",
+        "recruit",
+        "company",
+        "career",
+        "lpa",
+        "cdc"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Can students withdraw midway from a recruitment process?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "placement",
+        "package",
+        "recruit",
+        "company",
+        "career",
+        "lpa",
+        "cdc"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Is there a placement policy after getting two offers?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.773,
+      "found_keywords": [
+        "placement",
+        "recruit",
+        "career",
+        "cdc"
+      ],
+      "missing_keywords": [
+        "package",
+        "company",
+        "lpa"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided, if a student has already been selected by two employers, they are generally not allowed to participate in more campus recruitment processes until most of their batch mates get a fair chance. Here's how this is structured:\n\n1. **Initial Placement"
+    },
+    {
+      "question": "What is the campus-to-corporate initiative?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.977,
+      "found_keywords": [
+        "placement",
+        "career",
+        "cdc"
+      ],
+      "missing_keywords": [
+        "package",
+        "recruit",
+        "company",
+        "lpa"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "The Campus to Corporate initiative at K. R. Mangalam University ensures students are prepared for career success by offering diverse programs and activities that equip them with the necessary skills and knowledge to enter the workforce. This includes:\n\n1. **Structured Placement P"
+    },
+    {
+      "question": "Does KRMU support internship opportunities?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.609,
+      "found_keywords": [
+        "recruit",
+        "career",
+        "cdc"
+      ],
+      "missing_keywords": [
+        "placement",
+        "package",
+        "company",
+        "lpa"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Yes, KRMU supports internship opportunities through the Career Development Centre (CDC). The CDC coordinates industry internships for students. Students can also seek these opportunities directly with the companies listed as prominent recruiters on their website. Internship detai"
+    },
+    {
+      "question": "Are aptitude and technical trainings available?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "placement",
+        "package",
+        "recruit",
+        "company",
+        "career",
+        "lpa",
+        "cdc"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "What communication skill training is provided for placements?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.944,
+      "found_keywords": [
+        "placement",
+        "recruit",
+        "career",
+        "cdc"
+      ],
+      "missing_keywords": [
+        "package",
+        "company",
+        "lpa"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "The document does not explicitly state what specific communication skills training is provided for placements by the Career Development Center (CDC). However, based on the context and typical practices in placement support services, it can be inferred that the CDC likely provides"
+    },
+    {
+      "question": "Do students receive maths aptitude preparation?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "placement",
+        "package",
+        "recruit",
+        "company",
+        "career",
+        "lpa",
+        "cdc"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "What value-added courses help employability?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 5.999,
+      "found_keywords": [
+        "recruit"
+      ],
+      "missing_keywords": [
+        "placement",
+        "package",
+        "company",
+        "career",
+        "lpa",
+        "cdc"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Value-added courses that help with employability typically include a wide range of programs designed to complement academic studies or provide skills relevant to various industries. Based on the information provided, here are some value-added courses that can enhance employabilit"
+    },
+    {
+      "question": "Are there restrictions on appearing in many placement drives?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.039,
+      "found_keywords": [
+        "placement",
+        "recruit",
+        "career",
+        "cdc"
+      ],
+      "missing_keywords": [
+        "package",
+        "company",
+        "lpa"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided, there are indeed some restrictions regarding students appearing in many Placement Cell campus recruitment drives. Specifically:\n\n1. Students who have already been selected by two employers will be required to wait until most of their batch mates"
+    },
+    {
+      "question": "What documents should I carry on recruiter visit day?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.649,
+      "found_keywords": [
+        "recruit"
+      ],
+      "missing_keywords": [
+        "placement",
+        "package",
+        "company",
+        "career",
+        "lpa",
+        "cdc"
+      ],
+      "sources_count": 5,
+      "reason": "ok",
+      "answer_preview": "On the day of the recruiter visit, you should carry the following documents:\n\n- University identity card.\n- Two copies of Curriculum Vitae (CV).\n- Two copies of your educational certificates and degrees.  \n- Any other essential documents as prescribed in your admission letter.\n\nE"
+    },
+    {
+      "question": "Is dress code mandatory during campus recruitment?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.872,
+      "found_keywords": [
+        "placement",
+        "recruit"
+      ],
+      "missing_keywords": [
+        "package",
+        "company",
+        "career",
+        "lpa",
+        "cdc"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Yes, students are required to follow specific dress codes during campus recruitment at KR Mangalam University. Specifically:\n\n- Students must come smartly dressed in complete college uniform (coat/blazer is optional).\n- Candidates must carry:\n  - University identity card.\n  - 2 c"
+    },
+    {
+      "question": "How is the waiting list treated in placement outcomes?",
+      "category": "Placements",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.395,
+      "found_keywords": [
+        "placement",
+        "recruit",
+        "career",
+        "cdc"
+      ],
+      "missing_keywords": [
+        "package",
+        "company",
+        "lpa"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "In the placement cell's campus recruitment outcomes at K.R. Mangalam University, a student who appears on the final list of successful candidates can proceed with their job offer. However, if their name only features on the waiting list, they will be allowed to apply and particip"
+    },
+    {
+      "question": "What bus routes are available for KRMU students?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 6.928,
+      "found_keywords": [
+        "bus",
+        "route"
+      ],
+      "missing_keywords": [
+        "campus",
+        "hostel",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided, there are several bus routes available for KRMU (KR Mangalam University) students. Here's a summary of the available bus routes:\n\n1. **WEST DELHI ROUTES (W Series)**:\n   - Route W-1: Starting from Madhuban Chowk, stops include Deepali Chowk, Man"
+    },
+    {
+      "question": "Are bus timings available for major pickup points?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.908,
+      "found_keywords": [
+        "bus",
+        "route"
+      ],
+      "missing_keywords": [
+        "campus",
+        "hostel",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided, it seems that specific bus timing details are not explicitly mentioned for major pickup points. The general transport information includes bus departure times from HUDA City Centre to various destinations, but does not specify individual bus sch"
+    },
+    {
+      "question": "What hostel facilities are available at KRMU?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.129,
+      "found_keywords": [
+        "campus",
+        "hostel",
+        "facility"
+      ],
+      "missing_keywords": [
+        "bus",
+        "route",
+        "library",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "At KRMU, various hostel facilities are available to accommodate students. These include:\n\n1. Mess facility within the hostel premises where meal timings and menu are managed by the hostel administration.\n2. Special diet requests can be submitted to the mess committee for any diet"
+    },
+    {
+      "question": "How much are hostel charges and deposits?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.198,
+      "found_keywords": [
+        "hostel"
+      ],
+      "missing_keywords": [
+        "campus",
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided in the document:\n\n- **Hostel Fee (Per Annum)**: Rs. 1,72,000\n- **Hostel Security Deposit (Refundable)**: Rs. 20,000\n\nSo, the total hostel charges and deposits are:\n- Hostel Fee: Rs. 1,72,000\n- Hostel Security Deposit: Rs. 20,000\n\n**Total**: Rs. 1"
+    },
+    {
+      "question": "What is the size of KRMU campus?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.847,
+      "found_keywords": [
+        "campus"
+      ],
+      "missing_keywords": [
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "The total campus area of KR Mangalam University (KRMU) is 28+ acres."
+    },
+    {
+      "question": "What library facilities are available on campus?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.449,
+      "found_keywords": [
+        "campus",
+        "library"
+      ],
+      "missing_keywords": [
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "On campus, there are no specific details provided about the library facilities. However, based on common university setups, it's likely that KR Mangalam University offers a variety of resources and services for students to access information and study materials. Here\u2019s what might"
+    },
+    {
+      "question": "What sports facilities are available at KRMU?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 1.563,
+      "found_keywords": [],
+      "missing_keywords": [
+        "campus",
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "missing_keywords",
+      "answer_preview": "At KRMU, the Sports Club offers athletic competitions and fitness activities. The specific sports facilities available include inter-university sports events such as cricket, football, basketball, badminton, and chess.\n\nThe Sports Club is managed by Mr. Puneet Kumar as Director a"
+    },
+    {
+      "question": "How many labs are available for students?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "campus",
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Are there conference facilities on campus?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.522,
+      "found_keywords": [
+        "campus"
+      ],
+      "missing_keywords": [
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "There are no specific mentions of conference facilities on the provided information about KRMU's campus. The details given focus mainly on sports facilities, academic programs, admission processes, and placement opportunities. Conference facilities would typically be part of a co"
+    },
+    {
+      "question": "Is canteen or dining available on campus?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.317,
+      "found_keywords": [
+        "campus",
+        "hostel",
+        "facility"
+      ],
+      "missing_keywords": [
+        "bus",
+        "route",
+        "library",
+        "tour"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Yes, dining is available on campus. There are 2 spacious caf\u00e9s in every block where affordable meals with diverse and healthy menu options are served. Additionally, there is a Mess facility available within the hostel premises managed by the hostel administration."
+    },
+    {
+      "question": "What campus infrastructure highlights should students know?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.236,
+      "found_keywords": [
+        "campus",
+        "library"
+      ],
+      "missing_keywords": [
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "tour"
+      ],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "Here are some key campus infrastructure highlights that students should be aware of:\n\n- Total campus area: 28+ acres located in Sohna Road, Gurugram, Haryana 122103.\n- Centrally air-conditioned buildings.\n- Modern smart classrooms with ergonomic seating arrangements and interacti"
+    },
+    {
+      "question": "Is there a virtual campus tour option?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.908,
+      "found_keywords": [
+        "campus",
+        "tour"
+      ],
+      "missing_keywords": [
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "library"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Yes, there is a 360-degree virtual campus tour available on the university website."
+    },
+    {
+      "question": "How can I schedule a campus tour?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.496,
+      "found_keywords": [
+        "campus",
+        "tour"
+      ],
+      "missing_keywords": [
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "library"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "To schedule a campus tour, you can contact the Career Development Center (CDC) at K.R. MangMangalam University. (\\+91-9827085056) or visit their website: https://tinyurl.com/krmu-2025."
+    },
+    {
+      "question": "Where exactly is KRMU located?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.717,
+      "found_keywords": [],
+      "missing_keywords": [
+        "campus",
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 6,
+      "reason": "missing_keywords",
+      "answer_preview": "KRMU's location details are not provided in the given context."
+    },
+    {
+      "question": "Does KRMU provide transport route information?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.824,
+      "found_keywords": [
+        "bus",
+        "route"
+      ],
+      "missing_keywords": [
+        "campus",
+        "hostel",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Yes, KRMU provides transport route information. The following details are available:\n\n- For the complete list of all 77 bus routes with detailed stop-by-stop information, you can visit their website or contact their Transportation Department.\n- They also offer a Transport Route s"
+    },
+    {
+      "question": "What anti-ragging support exists in hostels and campus?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.253,
+      "found_keywords": [
+        "campus",
+        "hostel"
+      ],
+      "missing_keywords": [
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "In the context provided, there is no specific mention of anti-bullying or harassment support for new students within hostels or on the campus. However, some general measures are outlined that could be beneficial:\n\n1. **Hostel Rules (Anti-Bullying/Harassment)**:\n   - Students must"
+    },
+    {
+      "question": "Do hostels exist for both male and female students?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.635,
+      "found_keywords": [
+        "campus",
+        "hostel"
+      ],
+      "missing_keywords": [
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Yes, KR Mangalam University provides separate hostels for male and female students. Specifically:\n\n- Gayatri Hostel is designated for female students.\n- Vivekanand Hostel is designed for male students.\n\nBoth hostels are located within the university campus, making it convenient f"
+    },
+    {
+      "question": "How far is KRMU from Delhi airport?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 1.209,
+      "found_keywords": [],
+      "missing_keywords": [
+        "campus",
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 6,
+      "reason": "missing_keywords",
+      "answer_preview": "K.R. Mangalam University is just an hour drive from Delhi International Airport. Students need to book their tickets after obtaining a valid student visa from the Indian Embassy or High Commission."
+    },
+    {
+      "question": "Are smart classrooms available at KRMU?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 1.127,
+      "found_keywords": [],
+      "missing_keywords": [
+        "campus",
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "missing_keywords",
+      "answer_preview": "Yes, smart classrooms are available at KRMU. They feature ergonomic seating arrangements, interactive smart boards and projectors, and high-speed Wi-Fi connectivity in all classrooms."
+    },
+    {
+      "question": "Is KRMU campus eco-friendly?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.357,
+      "found_keywords": [
+        "campus"
+      ],
+      "missing_keywords": [
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "There is no specific information provided about whether KRMU (K.R. Mangalam University) campus is eco-friendly in the given text. The document focuses on academic infrastructure, placement policy, and admission processes rather than environmental sustainability initiatives or cer"
+    },
+    {
+      "question": "Can international students get hostel accommodation?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.616,
+      "found_keywords": [
+        "campus",
+        "hostel"
+      ],
+      "missing_keywords": [
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Yes, international students can get hostel accommodation at KRMU. The university provides hostels for its students and accommodates both male and female students within the campus. However, it's important to note that there are specific rules and regulations regarding hostel acco"
+    },
+    {
+      "question": "What are the major campus life highlights?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.025,
+      "found_keywords": [],
+      "missing_keywords": [
+        "campus",
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "missing_keywords",
+      "answer_preview": "I don't have enough reliable information in the current KRMU context to answer this accurately. Please rephrase or ask a more specific question."
+    },
+    {
+      "question": "What student facilities are available besides academics?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.455,
+      "found_keywords": [
+        "campus",
+        "hostel"
+      ],
+      "missing_keywords": [
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Besides academic facilities, KR Mangalam University offers several student welfare and recreational facilities. These include:\n\n- State-of-the-art sports facilities such as indoor sports like table tennis, foosball, billiards, chess, carrom; outdoor sports including cricket groun"
+    },
+    {
+      "question": "Do hostel facilities include common rooms and support services?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.222,
+      "found_keywords": [
+        "hostel"
+      ],
+      "missing_keywords": [
+        "campus",
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided, it does not explicitly mention whether hostel facilities include common rooms and support services. The document focuses mainly on academic programs, research facilities, career development resources, and transport details for students. While it"
+    },
+    {
+      "question": "What should new students know about campus access and movement?",
+      "category": "Campus / Hostel / Transport",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.012,
+      "found_keywords": [],
+      "missing_keywords": [
+        "campus",
+        "hostel",
+        "bus",
+        "route",
+        "facility",
+        "library",
+        "tour"
+      ],
+      "sources_count": 7,
+      "reason": "missing_keywords",
+      "answer_preview": "I don't have enough reliable information in the current KRMU context to answer this accurately. Please rephrase or ask a more specific question."
+    },
+    {
+      "question": "Where can I check the academic calendar?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.765,
+      "found_keywords": [
+        "academic",
+        "calendar"
+      ],
+      "missing_keywords": [
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 5,
+      "reason": "ok",
+      "answer_preview": "The academic calendar for the current session is available on the university website."
+    },
+    {
+      "question": "How does the examination process work at KRMU?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.893,
+      "found_keywords": [
+        "exam"
+      ],
+      "missing_keywords": [
+        "academic",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "KRMU does not conduct examinations as part of its admission process. The examination process is not mentioned in the provided information. Admission to KRMU appears to be handled through an application-based system where candidates apply and are selected based on their qualificat"
+    },
+    {
+      "question": "What is the attendance policy at KRMU?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.347,
+      "found_keywords": [
+        "exam",
+        "policy",
+        "code",
+        "attendance"
+      ],
+      "missing_keywords": [
+        "academic",
+        "ph.d",
+        "regulation",
+        "calendar"
+      ],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "The attendance policy at KRMU includes the following points:\n\n- Students must carry their university ID card at all times on campus.\n- Smoking, consumption of alcohol, and use of any banned substances are strictly prohibited on campus.\n- Students must not damage or misuse univers"
+    },
+    {
+      "question": "What does the code of conduct include?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "academic",
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "What is KRMU anti-ragging policy?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.882,
+      "found_keywords": [
+        "academic",
+        "exam",
+        "policy"
+      ],
+      "missing_keywords": [
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "KRMU's anti-bullying or harassment policy for new students, as part of the broader Anti-Ragging Policy, includes:\n\n- Definition of Ragging: This covers any act that causes physical or psychological harm, fear, or embarrassment to a student. It specifically mentions forcing studen"
+    },
+    {
+      "question": "How can students submit grievances?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "academic",
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "What is the role of Internal Complaints Committee?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "academic",
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Who is the ombudsperson at KRMU?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 1.143,
+      "found_keywords": [],
+      "missing_keywords": [
+        "academic",
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 7,
+      "reason": "missing_keywords",
+      "answer_preview": "The specific name of the Ombudsperson at K.R. Mangalam University (KRMU) is not provided in the given context. Therefore, I cannot provide a specific answer to who the Ombudsperson is without additional information."
+    },
+    {
+      "question": "What does academic affairs office handle?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.924,
+      "found_keywords": [
+        "academic",
+        "calendar"
+      ],
+      "missing_keywords": [
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "The Academic Affairs Office handles:\n\n- An academic calendar for the current session.\n- Pedagogy, which involves educational practices and methods."
+    },
+    {
+      "question": "What pedagogy approach does KRMU follow?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 1.646,
+      "found_keywords": [],
+      "missing_keywords": [
+        "academic",
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 8,
+      "reason": "missing_keywords",
+      "answer_preview": "K.R. Mangalam University follows a progressive pedagogical approach that emphasizes experiential learning and modern infrastructure. This is supported by corporate collaborations which provide real-world exposure to students. The contemporary curriculum, hands-on projects, and in"
+    },
+    {
+      "question": "What kind of international collaborations does KRMU have?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 1.332,
+      "found_keywords": [],
+      "missing_keywords": [
+        "academic",
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 7,
+      "reason": "missing_keywords",
+      "answer_preview": "Based on the provided information, there is no specific mention of international collaborations or partnerships that KRMU has. The details given focus mainly on internal aspects such as accreditation, placement processes, and career development center activities. There is no expl"
+    },
+    {
+      "question": "What is industry connect at KRMU?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.962,
+      "found_keywords": [
+        "academic"
+      ],
+      "missing_keywords": [
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Industry Connect at K.R. Mangalam University (KRMU) includes several initiatives to enhance industry exposure and collaboration for students:\n\n- The University has signed Memorandums of Understanding (MoUs) with renowned companies and institutions in diverse sectors.\n- These part"
+    },
+    {
+      "question": "What is Dean's Honor List?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "academic",
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "What research centers are available at KRMU?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.179,
+      "found_keywords": [
+        "academic"
+      ],
+      "missing_keywords": [
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "At KRMU (K.R. Mangalam University), there is a notable focus on research facilities that contribute significantly to academic and industrial advancements. The university boasts 100+ specialized research labs, which underscores its commitment to cutting-edge research in various di"
+    },
+    {
+      "question": "Where can I access PhD regulations?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.408,
+      "found_keywords": [
+        "academic",
+        "ph.d",
+        "regulation"
+      ],
+      "missing_keywords": [
+        "exam",
+        "policy",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 12,
+      "reason": "ok",
+      "answer_preview": "You can access the PhD Regulations at K.R. Mangalam University by visiting their official website or contacting their academic department directly. The specific pages for PhD Regulations are usually found in sections related to admissions, research programs, or faculty resources."
+    },
+    {
+      "question": "What is included in PhD submission checklist?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 2.893,
+      "found_keywords": [],
+      "missing_keywords": [
+        "academic",
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 11,
+      "reason": "missing_keywords",
+      "answer_preview": "The exact items included in the PhD submission checklist can vary depending on the specific institution and program guidelines, but generally, a PhD submission checklist might include:\n\n1. Completed thesis manuscript (including appendices)\n2. Abstract of the thesis\n3. Table of co"
+    },
+    {
+      "question": "Where can I see list of eligible PhD supervisors?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.119,
+      "found_keywords": [
+        "academic",
+        "ph.d"
+      ],
+      "missing_keywords": [
+        "exam",
+        "policy",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 11,
+      "reason": "ok",
+      "answer_preview": "The list of eligible PhD supervisors for the Ph.D. programme at K.R. Mangalam University can be found in the following document:\n\n[List of Eligible Ph.D. Supervisors]\n\nThis list is typically included in or referenced from other documents such as the Ph.D. Programme Course Handboo"
+    },
+    {
+      "question": "Where can I check list of awarded PhDs?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.351,
+      "found_keywords": [
+        "ph.d"
+      ],
+      "missing_keywords": [
+        "academic",
+        "exam",
+        "policy",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 11,
+      "reason": "ok",
+      "answer_preview": "The list of eligible PhD award recipients can be found in the \"List of Ph.D. Awarded\" section.\n\nIf you need more specific details or are looking for a particular document, please provide additional context so I can assist you better."
+    },
+    {
+      "question": "Where can I find PhD entrance exam syllabus?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.958,
+      "found_keywords": [
+        "academic",
+        "exam"
+      ],
+      "missing_keywords": [
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 12,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided, there doesn't seem to be a direct link or specific document for the PhD entrance exam syllabus available. The details given focus more on admission processes and criteria rather than the exam syllabus itself.\n\nHowever, you might be able to find "
+    },
+    {
+      "question": "What is in PhD programme course handbook?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.82,
+      "found_keywords": [
+        "academic",
+        "attendance"
+      ],
+      "missing_keywords": [
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code"
+      ],
+      "sources_count": 12,
+      "reason": "ok",
+      "answer_preview": "The PhD Programme Course Handbook typically contains important information that is relevant to students enrolled in a PhD program. This handbook usually includes details about the curriculum, course schedules, deadlines for various academic activities, policies and procedures, re"
+    },
+    {
+      "question": "What are recent PhD admission calls?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 2.686,
+      "found_keywords": [],
+      "missing_keywords": [
+        "academic",
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 12,
+      "reason": "missing_keywords",
+      "answer_preview": "Based on the information provided in the document, here are the recent PhD admission calls for Odd Semester and Even Semester:\n\n**Odd Semester 2026-27**\n- 1st Call Admission\n- 5th Call Admission\n\n**Even Semester 2025-26**\n- 5th Call Admission\n\nThese appear to be the most recent c"
+    },
+    {
+      "question": "Who can apply as full-time, part-time, or sponsored scholar?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "academic",
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "How many research publications are highlighted by KRMU?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.705,
+      "found_keywords": [],
+      "missing_keywords": [
+        "academic",
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 8,
+      "reason": "missing_keywords",
+      "answer_preview": "4,000+ research publications are highlighted by KRMU."
+    },
+    {
+      "question": "What are high-end teaching and research labs at KRMU?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 2.19,
+      "found_keywords": [],
+      "missing_keywords": [
+        "academic",
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 7,
+      "reason": "missing_keywords",
+      "answer_preview": "KRMU (K.R. Mangalam University) has a total of over 100 high-end teaching and research labs across the university. These include specialized laboratories such as:\n\n- Circuit and System Laboratories\n- Digital Electronics Lab\n- Robotics and Automation Lab\n- Electrical and Electroni"
+    },
+    {
+      "question": "What is Academic Bank of Credits in KRMU context?",
+      "category": "Academics / Policies / PhD",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.545,
+      "found_keywords": [
+        "academic"
+      ],
+      "missing_keywords": [
+        "exam",
+        "policy",
+        "ph.d",
+        "regulation",
+        "calendar",
+        "code",
+        "attendance"
+      ],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "In the context of KRMU (K.R. Mangalam University), there isn't any specific mention or definition provided for \"Academic Bank of Credits.\" However, based on general educational practices and terminology:\n\nAcademic Bank of Credits refers to a system where students accumulate credi"
+    },
+    {
+      "question": "What clubs and societies can students join at KRMU?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.412,
+      "found_keywords": [
+        "club",
+        "student"
+      ],
+      "missing_keywords": [
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Students at KR Mangalam University (KRMU) can join 14 student clubs designed to cover various domains including cultural, academic, creative, technology, sports, environment, and community service. Here are the specific clubs:\n\n1. **Cultural Clubs**\n2. **Academic Clubs**\n3. **Cre"
+    },
+    {
+      "question": "What support does student welfare provide?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance",
+        "student"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "What is Youth Red Cross Committee at KRMU?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.519,
+      "found_keywords": [
+        "events",
+        "welfare",
+        "committee",
+        "student"
+      ],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "grievance"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "The Youth Red Cross Committee at KR Mangalam University (KRMU) is a part of the Community Connect initiative. It focuses on fostering community service and promoting youth involvement in social causes. The committee likely organizes various activities, events, or projects that en"
+    },
+    {
+      "question": "What does community connect initiative do?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance",
+        "student"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "How can students track KRMU news and events?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.222,
+      "found_keywords": [
+        "events",
+        "committee",
+        "student"
+      ],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "welfare",
+        "grievance"
+      ],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "Students at KR Mangalam University (KRMU) can track news and events through the following methods:\n\n- **News & Events**: This section provides an overview of recent news and upcoming events happening on campus.\n- **Community Connect**: This platform allows students to connect wit"
+    },
+    {
+      "question": "What is KRMU Times?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.412,
+      "found_keywords": [
+        "events",
+        "student"
+      ],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "welfare",
+        "committee",
+        "grievance"
+      ],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "KRMU Times refers to the print coverage of K.R. Mangalam University (KRMU). It provides information about various aspects of university life, including academic programs, campus events, and student activities. This publication serves as a resource for students, faculty, and visit"
+    },
+    {
+      "question": "Where can I see KRMU print coverage?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.929,
+      "found_keywords": [],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance",
+        "student"
+      ],
+      "sources_count": 7,
+      "reason": "missing_keywords",
+      "answer_preview": "You can see KRMU print coverage at [KRMU Times Print Coverage](https://www.krmangalam.edu.in/kmu-times-print-coverage)."
+    },
+    {
+      "question": "Where can I access KRMU video gallery?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.77,
+      "found_keywords": [],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance",
+        "student"
+      ],
+      "sources_count": 7,
+      "reason": "missing_keywords",
+      "answer_preview": "You can access the KRMU video gallery through the following link:\n\nKRMU Times Video Gallery."
+    },
+    {
+      "question": "What kind of conferences does KRMU host?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.672,
+      "found_keywords": [
+        "student"
+      ],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "K.R. Mangalam University (KRMU) hosts several types of conferences, including:\n\n- ZEST (Inter-University Event): An inter-university event with 800+ participants from over 20 universities.\n- SPORTURA (Internal Competition): An internal competition with approximately 1,000 student"
+    },
+    {
+      "question": "How active is alumni engagement at KRMU?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 1.696,
+      "found_keywords": [
+        "events",
+        "student"
+      ],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "welfare",
+        "committee",
+        "grievance"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "The context provided does not contain specific information about the level of alumni engagement at K.R. Mangalam University (KRMU). There are no details given regarding activities such as alumni events, communication channels for current students to connect with alumni, or initia"
+    },
+    {
+      "question": "Are there career counselling events for students?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance",
+        "student"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "What cultural activities are available on campus?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 5.931,
+      "found_keywords": [
+        "club",
+        "societies",
+        "events",
+        "student"
+      ],
+      "missing_keywords": [
+        "welfare",
+        "committee",
+        "grievance"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "On campus, there are several cultural activities available. While the provided text does not specify detailed cultural activities, it mentions that vibrant campus life includes various extracurricular and social events. Based on this general information, some possible cultural ac"
+    },
+    {
+      "question": "What student-led initiatives happen at KRMU?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.773,
+      "found_keywords": [
+        "club",
+        "societies",
+        "events",
+        "student"
+      ],
+      "missing_keywords": [
+        "welfare",
+        "committee",
+        "grievance"
+      ],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "At K.R. Mangalam University (KRMU), several student-led initiatives occur as part of the Student Council's core functions:\n\n- **Student Activities & Governance**: Supervised by the Dean, these activities include overseeing various clubs and societies, ensuring active participatio"
+    },
+    {
+      "question": "How can I join extracurricular clubs?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance",
+        "student"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "What committee supports student grievance and discipline issues?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance",
+        "student"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "How does KRMU encourage social impact activities?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.632,
+      "found_keywords": [
+        "club",
+        "societies",
+        "events",
+        "student"
+      ],
+      "missing_keywords": [
+        "welfare",
+        "committee",
+        "grievance"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "K.R. Mangalam University encourages social impact activities through various clubs and societies that focus on specific areas of interest such as sustainability, health awareness, communication skills development, and managerial capabilities. Here are some ways these clubs contri"
+    },
+    {
+      "question": "Are there orientation programmes for freshers?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.011,
+      "found_keywords": [],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance",
+        "student"
+      ],
+      "sources_count": 7,
+      "reason": "missing_keywords",
+      "answer_preview": "I don't have enough reliable information in the current KRMU context to answer this accurately. Please rephrase or ask a more specific question."
+    },
+    {
+      "question": "What is campus quest event about?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.011,
+      "found_keywords": [],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance",
+        "student"
+      ],
+      "sources_count": 8,
+      "reason": "missing_keywords",
+      "answer_preview": "I don't have enough reliable information in the current KRMU context to answer this accurately. Please rephrase or ask a more specific question."
+    },
+    {
+      "question": "How can students showcase projects and innovation?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance",
+        "student"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Is there support for communication and personality development?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.001,
+      "found_keywords": [],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance",
+        "student"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "How does KRMU promote leadership among students?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.295,
+      "found_keywords": [
+        "welfare",
+        "student"
+      ],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "committee",
+        "grievance"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "K.R. Mangalam University (KRMU) promotes leadership among students through several initiatives:\n\n- **Core Functions of DSW**:\n  - The Dean of Student Welfare (DSW) oversees the implementation of various programs aimed at fostering leadership qualities in students.\n  - These inclu"
+    },
+    {
+      "question": "What are opportunities for peer learning at KRMU?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 5.173,
+      "found_keywords": [
+        "student"
+      ],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance"
+      ],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "At KR Mangalam University (KRMU), there are several opportunities for experiential and interdisciplinary learning that cater to different interests and career paths:\n\n1. **Interprofessional Practice**: The curriculum emphasizes interprofessional practice, allowing students from v"
+    },
+    {
+      "question": "How can students stay updated with upcoming activities?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare",
+        "committee",
+        "grievance",
+        "student"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Are there student support bodies beyond academics?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.117,
+      "found_keywords": [
+        "club",
+        "societies",
+        "student"
+      ],
+      "missing_keywords": [
+        "events",
+        "welfare",
+        "committee",
+        "grievance"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Yes, the school and university provide various forms of student support beyond just academics. For instance, there are likely counseling services to help students with personal issues or mental health concerns. Additionally, financial aid options such as scholarships and travel a"
+    },
+    {
+      "question": "Where can students raise concerns if unresolved at department level?",
+      "category": "Student Life / Support",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.052,
+      "found_keywords": [
+        "committee",
+        "grievance",
+        "student"
+      ],
+      "missing_keywords": [
+        "club",
+        "societies",
+        "events",
+        "welfare"
+      ],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Students can raise concerns through the university's online grievance submission portal available at [krmangalam.edu.in/iqac/greenviance-redressal-mechanism](http://krmangalam.edu.in/iqac/greenviance-redressal-mechanism). This portal is accessible for filing grievances related to"
+    },
+    {
+      "question": "Tell me about bus routes and highest placement package.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.725,
+      "found_keywords": [
+        "bus",
+        "route",
+        "package",
+        "placement"
+      ],
+      "missing_keywords": [],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "Here's an overview of the bus routes and the highest placement cell campus recruitment package at KRMU (Krmangalam University):\n\nBus Routes:\nThe university provides extensive transport services to cover major areas in Delhi, including West Delhi, Gurgaon/Gurugram, Dwarka, Bahadur"
+    },
+    {
+      "question": "Explain BTech CSE fee structure and scholarship options.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 9.589,
+      "found_keywords": [
+        "fee",
+        "scholarship"
+      ],
+      "missing_keywords": [
+        "btech"
+      ],
+      "sources_count": 9,
+      "reason": "ok",
+      "answer_preview": "Certainly! Below is an explanation of the Fee Structure for a Bachelor of Technology (B.Tech) in Computer Science and Engineering (CSE) at K.R. Mangalam University, along with the available scholarship options:\n\n### Fee Structure for B.Tech CSE\n\n#### Academic Year 2026-27\nThe fee"
+    },
+    {
+      "question": "I need hostel charges and payment procedure details.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 10.773,
+      "found_keywords": [
+        "hostel",
+        "payment",
+        "fee"
+      ],
+      "missing_keywords": [],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Certainly! Here are the detailed information on hostel charges and the payment procedure for K.R. Mangalam University (KRMU):\n\n### Hostel Charges\n\nHostel charges at KRMU include both accommodation fees and other miscellaneous charges. The specific amounts can vary based on room t"
+    },
+    {
+      "question": "Give me admission steps and required documents.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 8.035,
+      "found_keywords": [
+        "admission",
+        "application",
+        "documents"
+      ],
+      "missing_keywords": [],
+      "sources_count": 9,
+      "reason": "ok",
+      "answer_preview": "Certainly! Below are the admission steps and required documents for K.R. Mangalam University (KRMU). Please note that specific details might vary slightly depending on the program you're applying to, so it's always best to check the official KRMU website or contact their admissio"
+    },
+    {
+      "question": "Share PhD admission process and interview requirement.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 9.242,
+      "found_keywords": [
+        "admission",
+        "interview"
+      ],
+      "missing_keywords": [
+        "ph.d"
+      ],
+      "sources_count": 12,
+      "reason": "ok",
+      "answer_preview": "Certainly! Here's a detailed overview of the PhD admission process at K.R. Mangalam University, including key requirements for interviews:\n\n### Admission Process Overview\n\n1. **Application Submission**:\n   - Interested candidates must submit their applications through the officia"
+    },
+    {
+      "question": "What are placement training modules and mock tests?",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.38,
+      "found_keywords": [
+        "placement",
+        "training",
+        "mock"
+      ],
+      "missing_keywords": [],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "The Placement Cell typically offers several types of training modules and mock tests to help students prepare for their campus recruitment processes:\n\n### Training Modules:\n1. **Technical Skills Workshops**: These workshops focus on technical skills relevant to the student's fiel"
+    },
+    {
+      "question": "Tell me about anti-ragging policy and grievance mechanism.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "ragging",
+        "policy",
+        "grievance"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Summarize campus facilities and student clubs.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.898,
+      "found_keywords": [
+        "campus",
+        "facilit",
+        "club"
+      ],
+      "missing_keywords": [],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "The campus offers a comprehensive range of facilities to support the academic, recreational, and social needs of its students. Key features include:\n\n### Campus Facilities:\n1. **Sports Tournaments and Events**: Regular competitions like ZEST (Inter-University Event) and SPORTURA "
+    },
+    {
+      "question": "I want fee refund policy and helpdesk contact.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.409,
+      "found_keywords": [
+        "refund",
+        "fee",
+        "help"
+      ],
+      "missing_keywords": [],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "For the fee refund policy and helpdesk contact at KR Mangalam University, you can refer to the following information:\n\n### Fee Refund Policy:\n- **Fee Refund:** The university does not provide a general refund policy for fees. However, specific instances such as academic leave or "
+    },
+    {
+      "question": "What are international admission highlights and hostel options?",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.859,
+      "found_keywords": [
+        "international",
+        "admission",
+        "hostel"
+      ],
+      "missing_keywords": [],
+      "sources_count": 10,
+      "reason": "ok",
+      "answer_preview": "Based on the information provided in the given text, here are the key points regarding international admission highlights and hostel options:\n\n### International Admission Highlights:\n1. **Partnership with Esteemed Learning Partners**: The university collaborates with prestigious "
+    },
+    {
+      "question": "Explain recruiters, top package, and placement process.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 6.647,
+      "found_keywords": [
+        "recruit",
+        "package",
+        "placement"
+      ],
+      "missing_keywords": [],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "The placement cell's campus recruitment process typically involves several key steps to connect students with potential employers:\n\n### Recruiters:\nRecruiters are companies or organizations that come to the university to recruit fresh graduates. They often have specific roles wit"
+    },
+    {
+      "question": "Give me scholarship criteria and attendance condition.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 4.869,
+      "found_keywords": [
+        "scholarship",
+        "criteria",
+        "attendance"
+      ],
+      "missing_keywords": [],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "Here are the key scholarship criteria and attendance conditions from the provided text:\n\n### Scholarship Criteria:\n1. **Part A - On The Basis of Marks Scored in Class XII Examination**\n   - 90% and above: 100% scholarship on tuition fees (to be paid in 3 installments)\n   - 85% to"
+    },
+    {
+      "question": "How do I book campus tour and where is university located?",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 2.243,
+      "found_keywords": [
+        "campus",
+        "tour",
+        "located"
+      ],
+      "missing_keywords": [],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "To book a campus tour at K. R. Mangalam University (KRMU), you can visit their official website or contact them directly through the provided contact information:\n\n- **Contact Information:** \n  - Email: [email protected]\n  - Phone Numbers: 01148884888, 8800697010 \u2013 15, 8192888444"
+    },
+    {
+      "question": "What is dean honor list and academic calendar timing?",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 3.047,
+      "found_keywords": [
+        "dean",
+        "honor",
+        "calendar"
+      ],
+      "missing_keywords": [],
+      "sources_count": 8,
+      "reason": "ok",
+      "answer_preview": "The Dean's Honor List is a recognition given by KR Mangalam University to students who have performed exceptionally well academically throughout their studies. It typically includes details of the top-performing students in various courses or programs.\n\nRegarding the Academic Cal"
+    },
+    {
+      "question": "Compare admission office support with payment support.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 5.459,
+      "found_keywords": [
+        "admission",
+        "payment",
+        "support"
+      ],
+      "missing_keywords": [],
+      "sources_count": 10,
+      "reason": "ok",
+      "answer_preview": "Sure, let's compare the support provided by the admission and payment processes at K.R. Mangalam University:\n\n### Admission Support:\n1. **Online Application Process**: The university offers an online application process through their website, admissions.krmangalam.edu.in.\n2. **Ap"
+    },
+    {
+      "question": "Tell me CDC role and interview readiness support.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "cdc",
+        "career",
+        "interview"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Need details on bus transport and hostel life.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 13.75,
+      "found_keywords": [
+        "bus",
+        "transport",
+        "hostel"
+      ],
+      "missing_keywords": [],
+      "sources_count": 7,
+      "reason": "ok",
+      "answer_preview": "Certainly! Here are the detailed information for bus transport and hostel life at KR Mangalam University (KRMU):\n\n### Bus Transport Information\n\n**Effective from:** August 1, 2025\n\n#### UNIVERSITY ADDRESS:\nKR Mangalam University  \nSohna - Gurgaon Road, Sohna 122103  \nHaryana, Ind"
+    },
+    {
+      "question": "PhD regulations and submission checklist please.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 14.126,
+      "found_keywords": [
+        "ph.d",
+        "regulation",
+        "checklist"
+      ],
+      "missing_keywords": [],
+      "sources_count": 12,
+      "reason": "ok",
+      "answer_preview": "Here is the information regarding the PhD Regulations and Submission Checklist for K.R. Mangalam University:\n\n### PhD Regulations 2021\n\n**PhD Regulations 2021**\n\nThese regulations outline the procedures, requirements, and guidelines for pursuing a Doctor of Philosophy (Ph.D.) deg"
+    },
+    {
+      "question": "What clubs, events, and student welfare options are there?",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "club",
+        "event",
+        "welfare"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "I need placement portal info and recruiter list.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 6.2,
+      "found_keywords": [
+        "placement",
+        "portal",
+        "recruit"
+      ],
+      "missing_keywords": [],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "I understand you're looking for information about the Placement Cell's campus recruitment portal and a list of recruiters. However, as an AI, I don't have real-time access to specific databases or update lists. Here\u2019s what you can typically expect from such a portal and how to ob"
+    },
+    {
+      "question": "Can you give fee structure, scholarship, and financial aid summary?",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 11.31,
+      "found_keywords": [
+        "fee",
+        "scholarship",
+        "financial"
+      ],
+      "missing_keywords": [],
+      "sources_count": 9,
+      "reason": "ok",
+      "answer_preview": "Certainly! Below is a comprehensive summary of the fee structure, scholarships, and financial aid available at KR Mangalam University for the academic year 2026-27:\n\n### Fee Structure\n\n#### Academic Year Fees (Per Semester)\n1. **B.Tech Engineering Programs**\n   - **B.Tech Compute"
+    },
+    {
+      "question": "Explain admission offer, enrollment, and first fee payment.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 8.11,
+      "found_keywords": [
+        "admission",
+        "enroll",
+        "fee"
+      ],
+      "missing_keywords": [],
+      "sources_count": 10,
+      "reason": "ok",
+      "answer_preview": "Certainly! Here's a detailed explanation of the admission offer, enrollment process, and the first fee payment:\n\n### Admission Offer:\nWhen you receive an admission offer from K.R. Mangalam University (KRMU), it typically includes several important documents and information that a"
+    },
+    {
+      "question": "How does KRMU support research and industry collaboration?",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 6.388,
+      "found_keywords": [
+        "research",
+        "industry",
+        "collaboration"
+      ],
+      "missing_keywords": [],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "K.R. Mangalam University supports research and industry collaboration through several initiatives:\n\n1. **Industry Partnerships & Collaboration**:\n   - Establishes partnerships with various industries to foster research projects.\n   - These collaborations often lead to joint publi"
+    },
+    {
+      "question": "Tell me anti-ragging policy plus ICC and ombudsperson.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": false,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [
+        "ragging",
+        "icc",
+        "ombud"
+      ],
+      "sources_count": 0,
+      "reason": "missing_keywords_and_sources",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Share campus facilities, sports, and library highlights.",
+      "category": "Multi-topic",
+      "expect": "in_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 5.192,
+      "found_keywords": [
+        "campus",
+        "sports",
+        "library"
+      ],
+      "missing_keywords": [],
+      "sources_count": 6,
+      "reason": "ok",
+      "answer_preview": "Campus Facilities Highlights:\n\n- **Sports Facilities**: K.R. Mangalam University offers a variety of sports facilities to cater to diverse interests. The university boasts multiple athletic fields for cricket, football, basketball, badminton, and chess. Additionally, the campus h"
+    },
+    {
+      "question": "What is the weather on Mars today?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Who will win the next IPL season?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Should I buy Bitcoin this week?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Give me today's NIFTY intraday strategy.",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Write a Python quicksort implementation with complexity proof.",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Recommend best Korean drama to binge this weekend.",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "What is the cure for migraine at home?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Predict the next US presidential election result.",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Can you translate this sentence to Spanish?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Plan a 7-day Europe budget itinerary for me.",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Who is better Messi or Ronaldo with full stats?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "What are guaranteed stocks to double in one month?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Write a breakup apology letter for my girlfriend.",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "How to crack Google coding interview in 30 days?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Best gaming laptop under 1 lakh right now?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Tell me calories in a keto diet for fat loss.",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "How to file US taxes as a non-resident?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Can you explain quantum field theory basics?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.001,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Give me astrology prediction for my career.",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Who is the richest person in the world right now?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Suggest safest way to invest 50 lakh in mutual funds.",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "What are top tourist places in Japan in spring?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Can you solve this LeetCode hard graph problem?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "What is latest transfer news in European football?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    },
+    {
+      "question": "Should I switch from Android to iPhone 18 this year?",
+      "category": "Outside / Guardrail",
+      "expect": "out_of_domain",
+      "passed": true,
+      "status_code": 200,
+      "latency_sec": 0.002,
+      "found_keywords": [],
+      "missing_keywords": [],
+      "sources_count": 0,
+      "reason": "ok",
+      "answer_preview": "This question appears outside KRMU's knowledge base. I don't have reliable information for that in the current university dataset."
+    }
+  ]
+}
