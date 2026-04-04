@@ -1,0 +1,168 @@
+{
+  "generated_at_utc": "2026-04-04T16:18:08.086033+00:00",
+  "project_scan": {
+    "root": "/home/pyrosensei/Documents/Programming/Krmai/KRMAI",
+    "files_scanned": 99,
+    "dirs_scanned": 10,
+    "top_extensions": [
+      {
+        "extension": ".txt",
+        "count": 39
+      },
+      {
+        "extension": ".jsx",
+        "count": 17
+      },
+      {
+        "extension": ".png",
+        "count": 13
+      },
+      {
+        "extension": ".py",
+        "count": 9
+      },
+      {
+        "extension": ".json",
+        "count": 4
+      },
+      {
+        "extension": ".html",
+        "count": 2
+      },
+      {
+        "extension": ".md",
+        "count": 2
+      },
+      {
+        "extension": ".js",
+        "count": 2
+      },
+      {
+        "extension": "<no_ext>",
+        "count": 1
+      },
+      {
+        "extension": ".pdf",
+        "count": 1
+      },
+      {
+        "extension": ".pptx",
+        "count": 1
+      },
+      {
+        "extension": ".bat",
+        "count": 1
+      }
+    ],
+    "largest_files": [
+      {
+        "path": "assets/demo.webp",
+        "size_bytes": 7901780
+      },
+      {
+        "path": "KRMU-BUS-ROUTE-AUG25.pdf",
+        "size_bytes": 1558781
+      },
+      {
+        "path": "assets/chat_interface.png",
+        "size_bytes": 1249037
+      },
+      {
+        "path": "Mid term ppt format.pptx",
+        "size_bytes": 778166
+      },
+      {
+        "path": "assets/landing_page.png",
+        "size_bytes": 448393
+      },
+      {
+        "path": "evaluation/radar_comparison.png",
+        "size_bytes": 414232
+      },
+      {
+        "path": "assets/chat_response_fees.png",
+        "size_bytes": 328059
+      },
+      {
+        "path": "assets/chat_response_hostel.png",
+        "size_bytes": 318606
+      },
+      {
+        "path": "evaluation/02_radar_qwen_vs_llama.png",
+        "size_bytes": 282308
+      },
+      {
+        "path": "evaluation/feature_heatmap.png",
+        "size_bytes": 251871
+      }
+    ],
+    "key_file_status": {
+      "api.py": true,
+      "rag_engine.py": true,
+      "ingest.py": true,
+      "test_system.py": true,
+      "web-app/package.json": true,
+      "web-app/src/App.jsx": true
+    }
+  },
+  "api_health": {
+    "reachable": true,
+    "status_code": 200,
+    "latency_sec": 0.003,
+    "payload": {
+      "db": true,
+      "ollama": true,
+      "ready": true
+    }
+  },
+  "backend_tests": {
+    "ok": true,
+    "duration_sec": 138.67,
+    "exit_code": 0,
+    "summary": {
+      "parsed": true,
+      "passed": 23,
+      "failed": 0,
+      "total": 23,
+      "pass_rate_percent": 100.0
+    },
+    "stdout_tail": "========================================\n  TEST REPORT \u2014 KRMU Knowledge Retrieval System\n======================================================================\n\n  --- Infrastructure ---\n    [+] Ollama Running: Ollama running. Models: ['qwen3.5:9b', 'qwen2.5:3b', 'deepseek-v3.1:671b-cloud', 'qwen3-coder:480b-cloud'] (0.00s)\n    [+] Qwen2.5 Model Available: Qwen2.5 models found: ['qwen2.5:3b'] (0.00s)\n    [+] ChromaDB Exists: ChromaDB found at /home/pyrosensei/Documents/Programming/Krmai/KRMAI/chroma_db (0.00s)\n    [+] API Health Check: Health: {'db': True, 'ollama': True, 'ready': True} (0.00s)\n\n  --- Query Quality ---\n    [+] Bus Routes Query: Found: ['bus', 'route'], Missing: ['campus'] (9.87s)\n    [+] Placements Query: Found: ['placement', '56.6', 'lpa'], Missing: [] (8.39s)\n    [+] Top Placed Students: Found: ['rishav', 'vineet', 'ferrari', 'autodesk'], Missing: [] (15.69s)\n    [+] Fee Structure Query: Found: ['fee', 'btech', 'cse'], Missing: [] (5.27s)\n    [+] Hostel Facilities: Found: ['hostel', 'room'], Missing: [] (6.72s)\n    [+] Scholarships Query: Found: ['scholarship'], Missing: [] (6.16s)\n    [+] Anti-Ragging Policy: Found: ['ragging', 'policy'], Missing: [] (5.83s)\n    [+] Campus Facilities: Found: ['campus', 'facilit'], Missing: [] (10.82s)\n\n  --- Multi-Topic ---\n    [+] Bus + Placements (screenshot case): Found: ['bus', 'route', 'placement', 'package'], Missing: [], Length: 3804 chars (21.24s)\n    [+] Fees + Hostel Combined: Found: ['fee', 'hostel'], Missing: [] (13.45s)\n\n  --- Edge Cases ---\n    [+] Hinglish Query: Hindi/slang handled. Found: ['placement'] (11.04s)\n    [+] Slang Query: Slang handled. Found: ['fee'] (4.86s)\n    [+] Irrelevant Query: Irrelevant query handled: yes (0.00s)\n    [+] Empty Query: Empty query handled (status: 400) (0.00s)\n\n  --- Response Quality ---\n    [+] Not Truncated: Length: 4234 chars, Ends properly: True (10.65s)\n    [+] English-Only Response: English ratio: 100.00% (1.82s)\n    [+] Sources Returned: Sources returned: 7 (2.34s)\n\n  --- Streaming ---\n    [+] SSE Streaming Endpoint: Stream complete: True, Length: 590 chars (2.12s)\n\n  --- Performance ---\n    [+] Response Time < 60s: Response time: 2.3s (2.28s)\n\n======================================================================\n  TOTAL: 23 passed, 0 failed, 23 total\n  PASS RATE: 100.0%\n======================================================================\n\n  Full results saved to: /home/pyrosensei/Documents/Programming/Krmai/KRMAI/evaluation/test_results.json\n\n",
+    "stderr_tail": "",
+    "ran": true
+  },
+  "api_benchmark": {
+    "requests": 6,
+    "success": 6,
+    "failed": 0,
+    "success_rate_percent": 100.0,
+    "avg_latency_sec": 8.306,
+    "p95_latency_sec": 10.366,
+    "max_latency_sec": 10.717,
+    "avg_sources_count": 7.67,
+    "avg_answer_chars": 1254.3,
+    "errors": [],
+    "ran": true
+  },
+  "frontend_performance": {
+    "ok": true,
+    "skipped": false,
+    "install_ok": true,
+    "install_duration_sec": null,
+    "build_duration_sec": 2.2,
+    "dist_size_bytes": 638795,
+    "largest_assets": [
+      {
+        "path": "dist/assets/index-v0o8ZsB2.js",
+        "size_bytes": 575004
+      },
+      {
+        "path": "dist/assets/index-B5lcQlV6.css",
+        "size_bytes": 62856
+      }
+    ],
+    "build_stdout_tail": "\n> web-app@1.0.0 build\n> vite build\n\nvite v7.3.1 building client environment for production...\ntransforming...\n\u2713 2393 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.94 kB \u2502 gzip:   0.52 kB\ndist/assets/index-B5lcQlV6.css   62.86 kB \u2502 gzip:  10.75 kB\ndist/assets/index-v0o8ZsB2.js   575.00 kB \u2502 gzip: 176.05 kB\n\u2713 built in 1.70s\n",
+    "build_stderr_tail": "\n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n",
+    "ran": true
+  },
+  "overall_ok": true
+}

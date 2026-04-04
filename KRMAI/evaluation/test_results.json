@@ -35,97 +35,97 @@
     "name": "Bus Routes Query",
     "category": "Query Quality",
     "passed": true,
-    "duration": 6.67,
+    "duration": 9.87,
     "details": "Found: ['bus', 'route'], Missing: ['campus']",
-    "answer_preview": "KR Mangalam University offers various bus routes to cover different areas of Delhi. Here's a summary of the bus routes available:\n\n1. **Gurgaon / Gurugram (H routes)**:\n   - HUDA City Centre\n   - Cyber Park\n   - Sohna Road\n   - MG Road\n   - Sector 14\n   - Sector 31\n   - Sector 40\n   - Sector 46\n   - Sector 56\n\n2. **Dwarka (DW routes)**:\n   - Dwarka Sectors\n   - Uttam Nagar\n   - Nawada\n   - Janakpuri\n   - Dwarka Mor\n   - Vegas Mall\n\n3. **South Delhi**:\n   - Saket\n   - Mehrauli\n   - Qutub Minar\n  "
+    "answer_preview": "At KR Mangalam University, various bus routes are available to connect students with different areas of Delhi. Here's a summary of the bus routes:\n\n1. **Gurgaon / Gurugram (H routes)**\n   - HUDA City Centre\n   - Cyber Park\n   - Sohna Road\n   - MG Road\n   - Sector 14\n   - Sector 31\n   - Sector 40\n   - Sector 56\n\n2. **Dwarka (DW routes)**\n   - Dwarka Sectors\n   - Uttam Nagar\n   - Nawada\n   - Janakpuri\n   - Dwarka Mor\n   - Vegas Mall\n\n3. **South Delhi**\n   - Saket\n   - Mehrauli\n   - Qutub Minar\n   "
   },
   {
     "name": "Placements Query",
     "category": "Query Quality",
     "passed": true,
-    "duration": 2.61,
+    "duration": 8.39,
     "details": "Found: ['placement', '56.6', 'lpa'], Missing: []",
-    "answer_preview": "At KRMU (presumably referring to Kakatiya University), the highest placement package offered was \u20b956.6 LPA (Lakhs Per Annum). This was for a student named Rishav Bakshi who received an offer from Ferrari in their BCA program.\n\nThe highest package details are as follows:\n- Student Name: Rishav Bakshi\n- Programme: BCA\n- Package (LPA): \u20b956.6 LPA\n- Company: Ferrari\n- Role: \u2014 (Not specified)\n\nThis represents the top end of placements at KRMU, with other packages ranging from \u20b910.76 LPA to \u20b924 LPA acr"
+    "answer_preview": "At KRMU (presumably referring to Kakatiya University), the highest placement package offered was \u20b956.6 lakh per annum (LPA). This was for a student named Rishav Bakshi who received an offer from Ferrari with a role of \u2014, indicating it might be a general or unspecified position.\n\nThe highest package details are as follows:\n- Student Name: Rishav Bakshi\n- Programme: BCA (Bachelor of Computer Applications)\n- Package (LPA): \u20b956.6 LPA\n- Company: Ferrari\n- Role: Not specified\n\nThis represents the top "
   },
   {
     "name": "Top Placed Students",
     "category": "Query Quality",
     "passed": true,
-    "duration": 2.34,
+    "duration": 15.69,
     "details": "Found: ['rishav', 'vineet', 'ferrari', 'autodesk'], Missing: []",
-    "answer_preview": "The top placed students at KR Mangalam University (KRMU) as per the provided data include:\n\n- Rishav Bakshi, who secured a package of \u20b956.6 LPA and is associated with Ferrari.\n- Vineet Verma, who received a package of \u20b934 LPA and worked for Autodesk.\n- Shourya Tyagi, who got a package of \u20b934 LPA and was placed at Autodesk.\n- Daksh Mehta, who secured a package of \u20b936 LPA and was assigned as a Technical Sourcer by UNTAS.\n\nThese students are considered the top placers based on their highest package"
+    "answer_preview": "The top placed students at KR Mangalam University (KRMU) are:\n\n- Rishav Bakshi, who secured a package of \u20b956.6 LPA in BCA and is associated with Ferrari.\n- Vineet Verma and Shourya Tyagi, both securing \u20b934 LPA packages in B.Tech. CSE and are associated with Autodesk.\n- Daksh Mehta, who received a \u20b936 LPA package in B.Tech. CSE and is associated with UNTAS as Technical Sourcer.\n- Mr. Abhinav Anand, who got a \u20b924 LPA package in B.Tech. CSE and works as Network Engineer at Cargo Flash.\n- Mr. Avinas"
   },
   {
     "name": "Fee Structure Query",
     "category": "Query Quality",
     "passed": true,
-    "duration": 4.22,
+    "duration": 5.27,
     "details": "Found: ['fee', 'btech', 'cse'], Missing: []",
-    "answer_preview": "Based on the information provided in the given text, there isn't a specific section detailing the exact fee structure for BTech CSE (Computer Science and Engineering). However, we can infer some details from other engineering programs mentioned:\n\n- The hostel fee per annum is Rs. 1,72,000.\n- The shuttle transport fee per annum is Rs. 27,000.\n\nFor the BTech program in Computer Science and Engineering (CSE), if it follows a similar structure to other engineering programs, we can assume that there "
+    "answer_preview": "Based on the information provided in the document, there isn't a specific section detailing the exact fee structure for BTech CSE (Computer Science and Engineering). However, we can infer some details from other sections that might be relevant:\n\n1. **Hostel Fee**: Rs. 1,72,000 per annum.\n2. **Transport Fees**:\n   - Full Transport: Rs. 54,000 per annum\n   - Shuttle Transport: Rs. 27,000 per annum\n\nThese fees are mentioned for all students (presumably including BTech CSE), but the specific fee str"
   },
   {
     "name": "Hostel Facilities",
     "category": "Query Quality",
     "passed": true,
-    "duration": 4.56,
+    "duration": 6.72,
     "details": "Found: ['hostel', 'room'], Missing: []",
-    "answer_preview": "At KRMU, there are various hostel facilities designed to cater to the needs of students living within the campus. Here are some key aspects of these facilities:\n\n1. **Mess and Food**: Mess facility is available within the hostel premises. Meal timings and menu are managed by the hostel administration. Special diet requests can be submitted to the mess committee.\n\n2. **Hostel Rules (General)**:\n   - Students must carry their ID cards at all times within the hostel.\n   - Gate timings and curfew ho"
+    "answer_preview": "At KRMU, there are several hostel facilities available to students. Here's a summary of what is provided:\n\n1. **Mess and Food**: A mess facility is available within the hostel premises where meals can be served. Meal timings and menu management are handled by the hostel administration. Special diet requests from students can be submitted to the mess committee.\n\n2. **Hostel Rules (General)**: \n   - Students must carry their ID cards at all times within the hostel.\n   - Gate timings and curfew hou"
   },
   {
     "name": "Scholarships Query",
     "category": "Query Quality",
     "passed": true,
-    "duration": 3.75,
+    "duration": 6.16,
     "details": "Found: ['scholarship'], Missing: []",
-    "answer_preview": "To apply for scholarships at KR Mangalam University, you should follow these steps:\n\n1. **Document Verification During Admission**: Scholarships are awarded upon document verification during the admission process.\n\n2. **Merit Evaluation Based on Marks/Scor**: Your eligibility is evaluated based on your marks or scores in relevant examinations.\n\n3. **Scholarship Requires Certificate Verification and Physical Test for Sports**: For sports scholarships, you need to provide a certificate of physical"
+    "answer_preview": "To apply for scholarships at KR Mangalam University, you should follow these steps:\n\n1. **Document Verification During Admission**: Scholarships are awarded upon document verification during the admission process.\n\n2. **Merit Evaluation Based on Marks/Scor**: Your application will be evaluated based on your marks or scores in relevant examinations and tests.\n\n3. **Sports Scholarship Requirements**: For sports scholarships, you need to provide certificate verification as well as undergo physical "
   },
   {
     "name": "Anti-Ragging Policy",
     "category": "Query Quality",
     "passed": true,
-    "duration": 2.83,
+    "duration": 5.83,
     "details": "Found: ['ragging', 'policy'], Missing: []",
-    "answer_preview": "The Anti-Ragging Policy at KR Mangalam University (KRMU) includes a Zero Tolerance stance towards any form of bullying, harassment, or discrimination against new students. The policy covers various forms such as:\n\n- Forcing juniors to address seniors in a particular or demeaning way.\n- Any act that affects the mental health or dignity of a student.\n- Cyberbullying, online harassment, or defamation on social media.\n\nThe University maintains strict rules and punishments for these offenses, ranging"
+    "answer_preview": "The Anti-Ragging Policy at KR Mangalam University (KRMU) includes a Zero Tolerance stance towards bullying and harassment. The policy defines ragging as any act that causes physical or psychological harm, fear, or embarrassment to a student, including but not limited to verbal abuse, intimidation, discrimination based on caste, religion, gender, or region.\n\nFor new students specifically, the university maintains strict rules against any form of ragging. This includes prohibiting forcing juniors "
   },
   {
     "name": "Campus Facilities",
     "category": "Query Quality",
     "passed": true,
-    "duration": 3.7,
+    "duration": 10.82,
     "details": "Found: ['campus', 'facilit'], Missing: []",
-    "answer_preview": "On-campus facilities at KR Mangalam University include:\n\n- Modern smart classrooms equipped with ergonomic seating arrangements, interactive smart boards, projectors, and high-speed internet connectivity.\n- A canteen (campus cafeteria) for students to purchase meals.\n- Hostels where students can stay during their studies. The fee structure includes an application fee of Rs. 1,000, registration fee of Rs. 25,000, security deposit of Rs. 10,000, hostel fee (per annum) of Rs. 172,000, and a refunda"
+    "answer_preview": "On-campus facilities at KR Mangalam University include:\n\n- Modern smart classrooms equipped with ergonomic seating arrangements, interactive smart boards, projectors, and high-speed internet connectivity.\n- A canteen providing meals for students.\n- Hostels where students can stay during their academic years.\n- A campus security system to ensure the safety of all students.\n- Academic resources such as libraries and study rooms.\n- Sports facilities including a gymnasium, football field, basketball"
   },
   {
     "name": "Bus + Placements (screenshot case)",
     "category": "Multi-Topic",
     "passed": true,
-    "duration": 10.38,
-    "details": "Found: ['bus', 'route', 'placement', 'package'], Missing: [], Length: 3013 chars",
-    "answer_preview": "Here's a summary of the information regarding bus routes, placement details, top-performing students, and average packages for the NIT Trichy campus:\n\n### Bus Routes and Timings:\nThe NIT Trichy campus offers various bus services to connect different parts of the city. Here are some key points about these routes and timings:\n\n- **Earliest Departure:** The earliest departure time is 06:20 AM, which applies to routes from Bahadurgarh and distant areas.\n- **Local Gurgaon Routes:** These depart at ar"
+    "duration": 21.24,
+    "details": "Found: ['bus', 'route', 'placement', 'package'], Missing: [], Length: 3804 chars",
+    "answer_preview": "Certainly! Here's a summary of the key points regarding the bus routes, placement details, top-ranked students, and average packages for the NIT Trichy:\n\n### Bus Routes:\nThe university offers various bus services to connect different areas in and around Trichy. The primary routes include:\n1. **Madhuban Chowk (Shastri Nagar)**: Services from Madhuban Chowk and Shastri Nagar, covering places like Paschim Vihar, Rajouri Garden, Tilak Nagar.\n2. **Gurgaon / Gurugram**: Routes starting from HUDA City "
   },
   {
     "name": "Fees + Hostel Combined",
     "category": "Multi-Topic",
     "passed": true,
-    "duration": 1.79,
+    "duration": 13.45,
     "details": "Found: ['fee', 'hostel'], Missing: []",
-    "answer_preview": "Based on the information provided, there is no specific fee structure or details about hostel charges mentioned for BTech CSE students. The document primarily focuses on PG (postgraduate) scholarships and hostel facilities for undergraduate and postgraduate students.\n\nFor BTech CSE students, you would need to refer to the university's official BTech program guidelines or contact their administrative office directly to obtain accurate information regarding fees and hostel charges."
+    "answer_preview": "Based on the information provided in the text, there is no specific fee structure or details about hostel charges mentioned for BTech CSE (or any other branch) students. The document focuses primarily on PG (postgraduate) scholarships, eligibility conditions, and hostel facilities for PG students.\n\nFor BTech CSE students, you would need to refer to a different section of the document or contact the university directly for accurate fee details and hostel charges specific to that program."
   },
   {
     "name": "Hinglish Query",
     "category": "Edge Cases",
     "passed": true,
-    "duration": 6.12,
+    "duration": 11.04,
     "details": "Hindi/slang handled. Found: ['placement']",
-    "answer_preview": "KRMU's Placement Cell excels in its campus recruitment efforts, offering a comprehensive and supportive environment for students aiming to secure job placements after graduation. Here are some key aspects of KRMU's Placement Cell in terms of campus recruitment:\n\n1. **Proactive Outreach**: The Placement Cell initiates proactive outreach with companies, ensuring that the best opportunities reach the student community.\n\n2. **Diverse Opportunities**: They provide a wide range of opportunities across"
+    "answer_preview": "KRMU (likely referring to Kumaon University, though this might vary depending on context) has a robust Placement Cell that excels in campus recruitment for its students. Here are some key points highlighting why KRMU's Placement Cell stands out:\n\n1. **Strong Industry Partnerships**: The Placement Cell maintains strong relationships with numerous industry partners across various sectors, ensuring ample opportunities for students.\n\n2. **Diverse Job Profiles**: They offer a wide range of job profil"
   },
   {
     "name": "Slang Query",
     "category": "Edge Cases",
     "passed": true,
-    "duration": 7.49,
+    "duration": 4.86,
     "details": "Slang handled. Found: ['fee']",
-    "answer_preview": "Based on the information provided in the text, here is a summarized fee structure for Real (presumably referring to KRMangalam University):\n\n### Undergraduate (UG) Fee Structure:\n\n- **Tuition Fees**: Not specified directly but can be inferred as part of overall fees.\n- **Hostel Fees**:\n  - Per Annum: Rs. 1,72,000\n  - Refundable Security Deposit: Rs. 20,000 (Refunded upon leaving the hostel)\n- **Transport Fees**:\n  - Full Transport (Per Annum): Rs. 54,000\n  - Shuttle Transport (Per Annum): Rs. 27"
+    "answer_preview": "Based on the information provided in the text, here is a summary of the fee structures:\n\n### Undergraduate (UG) Fee Structure:\n- **M.Pharm.**:\n  - Full Fee: Not specified directly but can be inferred from other PG and UG fees.\n  - Installments: Typically 4 installments per year.\n  - Hostel Fees: Rs. 1,72,000/year (Rs. 1,72,000 x 4 = Rs. 688,000 for full academic year).\n  - Transport Fees: Rs. 54,000/year + Rs. 27,000/year = Rs. 81,000/year.\n  \n### Postgraduate (PG) Fee Structure:\n- **MBA**:\n  - "
   },
   {
     "name": "Irrelevant Query",
@@ -147,40 +147,40 @@
     "name": "Not Truncated",
     "category": "Response Quality",
     "passed": true,
-    "duration": 11.37,
-    "details": "Length: 4259 chars, Ends properly: True",
-    "answer_preview": "The Placement Cell (CDC) at KRMU plays a crucial role in preparing students for their career transitions through various training programs, mock tests, and support services. Here's an overview of the complete campus recruitment process and some notable top recruiters:\n\n### Complete Campus Recruitment Process by CDC\n\n#### 1. **Pre-Placement Talk**\n   - **Objective:** To familiarize students with the company culture, roles, responsibilities, and expectations.\n   - **Process:** Students attend a pr"
+    "duration": 10.65,
+    "details": "Length: 4234 chars, Ends properly: True",
+    "answer_preview": "The Placement Cell (CDC) at KRMU plays a crucial role in guiding students through their career journey, from initial interest to securing job offers. Here's an overview of the complete campus recruitment process conducted by the CDC, along with some notable top recruiters:\n\n### Complete Campus Recruitment Process\n\n#### 1. Pre-Placement Talk\nThe placement cell organizes pre-placement talks (PPTs) where representatives from companies visit campuses and give presentations about their organizations,"
   },
   {
     "name": "English-Only Response",
     "category": "Response Quality",
     "passed": true,
-    "duration": 2.14,
+    "duration": 1.82,
     "details": "English ratio: 100.00%",
-    "answer_preview": "The hostel fee at K.R. Mangalam University appears to be Rs. 1,72,000 per annum (Per Annum). This can be seen in the provided information where it states:\n\n\"5. Hostel Fees\n\n- Hostel Fee (Per Annum): Rs. 1,72,000\n- Hostel Security Deposit (Refundable): Rs. 20,000\"\n\nSo, the hostel fee is Rs. 1,72,000 annually."
+    "answer_preview": "The hostel fee at K.R. Mangalam University appears to be Rs. 1,72,000 per annum (Per Annum). This can be seen in the information provided about the \"Hostel Fees\" section:\n\n- Hostel Fee (Per Annum): Rs. 1,72,000\n\nSo, the hostel fee is Rs. 1,72,000 annually."
   },
   {
     "name": "Sources Returned",
     "category": "Response Quality",
     "passed": true,
-    "duration": 2.4,
+    "duration": 2.34,
     "details": "Sources returned: 7",
-    "answer_preview": "The highest placement cell campus recruitment package at this institution was \u20b956.6 LPA (Lakhs Per Annum). This package was offered to Rishav Bakshi for his BCA programme by Ferrari.\n\nHere's a breakdown of the information provided:\n\n- Student Name: Rishav Bakshi\n- Programme: BCA\n- Package (LPA): \u20b956.6 LPA\n- Company: Ferrari\n- Role: \u2014 (Not specified)\n\nThis is clearly stated in the given data, making it evident that this was the highest package offered by any company during campus recruitment at t"
+    "answer_preview": "The highest placement cell campus recruitment package at this institution was \u20b956.6 LPA (Lakhs Per Annum), offered to Rishav Bakshi for his BCA programme by Ferrari.\n\nThis can be seen from the table provided, which shows:\n\n| Student Name           | Programme         | Package (LPA) | Company              | Role                |\n|-------------------------|-------------------|---------------|----------------------|---------------------|\n| Rishav Bakshi          | BCA               | \u20b956.6 LPA    "
   },
   {
     "name": "SSE Streaming Endpoint",
     "category": "Streaming",
     "passed": true,
-    "duration": 2.21,
-    "details": "Stream complete: True, Length: 649 chars",
-    "answer_preview": "K.R. Mangalam University (KRMU) is a vibrant educational institution with over 100 multidisciplinary programs and a rich history of providing quality education for more than 13 years. The university offers a wide range of Ph.D. programs and regularly recruits students from various sectors including technology, engineering, automotive, media, FMCG & construction, healthcare, and others. KRMU has established strong industry partnerships and collaborations with renowned companies to enhance its stu"
+    "duration": 2.12,
+    "details": "Stream complete: True, Length: 590 chars",
+    "answer_preview": "K.R. Mangalam University (KRMU) is a vibrant educational institution that offers 100+ multidisciplinary programs over 13 years of experience. The university has established itself as a hub for research and innovation, boasting 4000+ no. of research publications and grants worth \u20b916Cr+. KRMU's placement process includes structured steps like pre-placement talks, written tests, interviews, and group discussions to help students secure job opportunities after completing their M.Pharm degree. The un"
   },
   {
     "name": "Response Time < 60s",
     "category": "Performance",
     "passed": true,
-    "duration": 2.04,
-    "details": "Response time: 2.0s",
-    "answer_preview": "K.R. Mangalam University (KRMU) is a vibrant educational institution offering over 100 multidisciplinary programs spanning various sectors including Technology & Engineering, Automotive, Media, FMCG & Construction, Healthcare & Pharma, and others. Established for more than 13 years, KRMU boasts a robust research ecosystem with 4000+ published research papers and significant grants totaling approximately \u20b916 Cr. The university is committed to providing students with comprehensive support througho"
+    "duration": 2.28,
+    "details": "Response time: 2.3s",
+    "answer_preview": "K.R. Mangalam University (KRMU) is a vibrant educational institution offering over 100 multidisciplinary programs spanning various fields including Technology & Engineering, Automotive, Media, FMCG & Construction, Healthcare & Pharma, and others. Established for over 13 years, KRMU has gained recognition through its extensive research activities, with 4000+ publications, grants worth \u20b916 Cr+, and a robust placement process that includes structured steps like Pre-Placement Talks, Written Tests, I"
   }
 ]
